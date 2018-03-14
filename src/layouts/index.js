@@ -13,6 +13,12 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
+      link={[
+        {
+          href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro',
+          rel: 'stylesheet'
+        }
+      ]}
     />
     <Header />
     <div
