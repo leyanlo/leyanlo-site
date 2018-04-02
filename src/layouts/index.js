@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
-import '../styles/index.js'
+import '../../node_modules/normalize.css/normalize.css'
+import './typography.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
