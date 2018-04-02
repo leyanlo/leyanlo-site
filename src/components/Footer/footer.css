@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background-color: hsl(315, 100%, 25%);
+}
+
+.footer__copyright {
+  color: hsl(285, 10%, 90%);
+}

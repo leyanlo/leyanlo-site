@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import '../../node_modules/normalize.css/normalize.css'
 import './index.css'
 
@@ -28,10 +29,12 @@ const TemplateWrapper = ({ children }) => (
         maxWidth: 960,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
+        minHeight: 'calc(100vh - 245px)',
       }}
     >
       {children()}
     </div>
+    <Footer />
   </div>
 )
 
