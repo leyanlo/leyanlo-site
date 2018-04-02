@@ -1,0 +1,40 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  color: hsl(315, 100%, 25%);
+  text-decoration: none;
+  transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+a:focus,
+a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive helpers */
+
+@media screen and (max-width: 768px) {
+  .--hidden_mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .--hidden_tablet {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1216px) {
+  .--hidden_desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1408px) {
+  .--hidden_widescreen {
+    display: none;
+  }
+}

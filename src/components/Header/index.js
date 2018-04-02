@@ -1,31 +1,37 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import logo from './logo.svg'
+import './navbar.css'
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
+  <div className="navbar">
+    <div className="navbar__container">
+      <Link
+        to="/"
+        className="navbar__item"
+      >
+        <img src={logo} className="navbar__brand" />
+        <span className="navbar__title --hidden_mobile">Leyan Lo</span>
+      </Link>
+      <div className="navbar__space" />
+      <Link
+        to="/software"
+        className="navbar__item"
+      >
+        SOFTWARE
+      </Link>
+      <Link
+        to="/violin"
+        className="navbar__item"
+      >
+        VIOLIN
+      </Link>
+      <Link
+        to="/cubing"
+        className="navbar__item"
+      >
+        CUBING
+      </Link>
     </div>
   </div>
 )

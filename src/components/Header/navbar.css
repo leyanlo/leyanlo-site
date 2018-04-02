@@ -1,0 +1,35 @@
+.navbar {
+  background: hsl(285, 10%, 90%);
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 16px;
+}
+
+.navbar__brand {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar__title {
+  font-size: 32px;
+  margin-left: 12px;
+}
+
+.navbar__space {
+  flex-grow: 1;
+}
+
+.navbar__item {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.navbar__item:not(:first-child) {
+  margin-left: 18px;
+}
