@@ -6,11 +6,16 @@ a {
   color: hsl(315, 100%, 25%);
   text-decoration: none;
   transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: .8;
 }
 
-a:focus,
+a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
 a:hover {
-  opacity: 0.8;
+  opacity: .5;
 }
 
 /* Responsive helpers */
