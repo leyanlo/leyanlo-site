@@ -29,6 +29,7 @@
   display: flex;
   align-items: center;
   font-weight: bold;
+  height: 100%;
 }
 
 .navbar__item:not(:first-child) {
