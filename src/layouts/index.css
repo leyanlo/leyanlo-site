@@ -21,25 +21,49 @@ a:hover {
 /* Responsive helpers */
 
 @media screen and (max-width: 768px) {
-  .--hidden_mobile {
+  .--hidden_lte_mobile {
     display: none;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .--hidden_tablet {
+@media screen and (min-width: 769px) {
+  .--hidden_gte_tablet {
     display: none;
   }
 }
 
-@media screen and (max-width: 1216px) {
-  .--hidden_desktop {
+@media screen and (max-width: 1023px) {
+  .--hidden_lte_tablet {
     display: none;
   }
 }
 
-@media screen and (max-width: 1408px) {
-  .--hidden_widescreen {
+@media screen and (min-width: 1024px) {
+  .--hidden_gte_desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .--hidden_lte_desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .--hidden_gte_widescreen {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1407px) {
+  .--hidden_lte_widescreen {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .--hidden_gte_fullhd {
     display: none;
   }
 }
