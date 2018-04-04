@@ -11,7 +11,6 @@ const Header = () => (
         className="navbar__item"
       >
         <img src={logo} className="navbar__brand" />
-        <span className="navbar__title --hidden_mobile">Leyan Lo</span>
       </Link>
       <div className="navbar__space" />
       <Link
