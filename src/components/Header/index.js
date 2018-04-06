@@ -1,35 +1,33 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import logo from './logo.svg'
-import './navbar.css'
 
 const Header = () => (
   <div className="navbar">
     <div className="navbar__container">
       <Link
         to="/"
-        className="navbar__item"
+        className="navbar__item --brand"
       >
-        <img src={logo} className="navbar__brand" />
+        <img src={logo} />
       </Link>
-      <div className="navbar__space" />
       <Link
         to="/software"
         className="navbar__item"
       >
-        SOFTWARE
+        Software
       </Link>
       <Link
         to="/violin"
         className="navbar__item"
       >
-        VIOLIN
+        Violin
       </Link>
       <Link
         to="/cubing"
         className="navbar__item"
       >
-        CUBING
+        Cubing
       </Link>
     </div>
   </div>

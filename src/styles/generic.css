@@ -1,0 +1,15 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: hsla(225, 10%, 90%);
+}
+
+a {
+  color: hsl(315, 100%, 25%);
+  text-decoration: none;
+  transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: .8;
+}
+
+a:hover {
+  opacity: .5;
+}
