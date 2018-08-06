@@ -6,22 +6,16 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-favicon`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        logo: "./src/favicon.png",
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: false
-        }
-      }
+        name: "Leyan Lo",
+        short_name: "Leyan Lo",
+        start_url: "/",
+        background_color: "#E3E4E8",
+        theme_color: "#99327F",
+        display: "minimal-ui",
+        icon: "/static/favicon.png"
+      },
     },
   ],
 };

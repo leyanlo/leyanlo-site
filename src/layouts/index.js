@@ -18,6 +18,11 @@ const TemplateWrapper = ({ children }) => (
         {
           href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,500',
           rel: 'stylesheet'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: 'favicon.png'
         }
       ]}
     />

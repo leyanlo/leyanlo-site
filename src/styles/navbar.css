@@ -1,15 +1,8 @@
-.navbar {
+.header {
   background: white;
 }
 
-.navbar__container {
-  display: flex;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.navbar__item {
+.nav__item {
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -17,10 +10,10 @@
   height: 50px;
 }
 
-.navbar__item:not(:first-child) {
+.nav__item:not(:first-child) {
   margin-left: 18px;
 }
 
-.navbar__item.--brand {
+.nav__item.--brand {
   flex-grow: 1;
 }

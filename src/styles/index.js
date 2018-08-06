@@ -8,5 +8,6 @@ import './generic.css'
 import './navbar.css'
 
 // Layout
+import './layout/container.css'
 import './hero.css'
 import './footer.css'
