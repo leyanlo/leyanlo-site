@@ -15,7 +15,12 @@ const typography = new Typography({
     'Droid Sans',
     'Helvetica Neue',
     'sans-serif'
-  ]
+  ],
+  overrideStyles: () => ({
+    html: {
+      overflowY: 'initial'
+    }
+  })
 });
 
 export default typography;
