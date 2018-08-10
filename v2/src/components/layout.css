@@ -1,3 +1,7 @@
+body {
+  background: hsla(225, 10%, 90%);
+}
+
 a {
   color: hsl(315, 100%, 25%);
   text-decoration: none;
