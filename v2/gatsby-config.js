@@ -3,7 +3,14 @@ module.exports = {
     title: 'Leyan Lo'
   },
   plugins: [
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: ['Source Sans Pro', 'Source Serif Pro']
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -16,7 +23,6 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
       }
     },
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-typography`,
       options: {
