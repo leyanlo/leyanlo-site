@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter'
+    title: 'Leyan Lo'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -22,6 +22,6 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography.js`
       }
-    },
+    }
   ]
 };
