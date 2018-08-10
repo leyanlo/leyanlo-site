@@ -23,7 +23,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "stylelint": "stylelint '**/*.css'",
+    "stylelint": "stylelint 'src/**/*.css'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
