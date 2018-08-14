@@ -1,0 +1,19 @@
+:root {
+  --footerHeight: 80px;
+}
+
+.footer {
+  background-color: hsl(225, 25%, 25%);
+  color: rgba(255, 255, 255, 0.8);
+  height: var(--footerHeight);
+}
+
+.footerBar {
+  height: calc(var(--footerHeight) - 30px);
+  display: flex;
+  align-items: center;
+}
+
+.footerBar__copyright {
+  padding: 10px;
+}

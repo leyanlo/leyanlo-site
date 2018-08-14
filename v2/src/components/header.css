@@ -1,5 +1,10 @@
+:root {
+  --headerHeight: 50px;
+}
+
 .header {
   background: white;
+  height: var(--headerHeight);
 }
 
 .navbar {
@@ -15,8 +20,8 @@
 }
 
 .navbar__item.-brand {
-  width: 50px;
-  height: 50px;
+  width: var(--headerHeight);
+  height: var(--headerHeight);
 }
 
 .navbar__logo {
