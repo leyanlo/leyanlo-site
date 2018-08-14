@@ -1,0 +1,28 @@
+.header {
+  background: white;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.navbar__item.-brand {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar__logo {
+  margin-bottom: 0;
+}
+
+.navbar__gap {
+  flex-grow: 1;
+}
