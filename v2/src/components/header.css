@@ -5,6 +5,8 @@
 .header {
   background: white;
   height: var(--headerHeight);
+  opacity: 0;
+  animation: fadeIn 1s cubic-bezier(0.19, 1, 0.22, 1) 0.25s forwards;
 }
 
 .navbar {
