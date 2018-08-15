@@ -1,7 +1,3 @@
-:root {
-  --footerHeight: 80px;
-}
-
 .footer {
   background-color: hsl(225, 25%, 25%);
   color: rgba(255, 255, 255, 0.8);

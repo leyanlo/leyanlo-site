@@ -1,5 +1,10 @@
 /* Global styles */
 
+:root {
+  --headerHeight: 50px;
+  --footerHeight: 80px;
+}
+
 body {
   background: hsla(225, 10%, 90%);
 }

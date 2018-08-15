@@ -1,7 +1,3 @@
-:root {
-  --headerHeight: 50px;
-}
-
 .header {
   background: white;
   height: var(--headerHeight);
