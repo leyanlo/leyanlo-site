@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
         <h3 className="brand__title">{siteTitle}</h3>
       </Link>
       <nav className="navbar" role="navigation" aria-label="main navigation">
-        <Link to="/" className="navbar__item">
+        <Link to="/" className="navbar__item -hiddenTablet">
           <NavbarHome className="navbar__icon" />
           Home
         </Link>

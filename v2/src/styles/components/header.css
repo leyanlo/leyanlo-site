@@ -68,6 +68,10 @@
     text-transform: uppercase;
   }
 
+  .navbar__item.-hiddenTablet {
+    display: none;
+  }
+
   .navbar__icon {
     display: none;
   }
