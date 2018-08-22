@@ -63,7 +63,6 @@
   .navbar__item {
     flex-direction: row;
     padding: 0 16px;
-    font-weight: bold;
     font-size: 100%;
     text-transform: uppercase;
   }

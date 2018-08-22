@@ -6,8 +6,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.25;
   background-color: hsl(225, 10%, 90%);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
