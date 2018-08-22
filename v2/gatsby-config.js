@@ -14,11 +14,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Leyan Lo',
+        short_name: 'Leyan Lo',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#E3E4E8',
+        theme_color: '#001F7F',
         display: 'minimal-ui',
         icon: 'src/images/logo.png'
       }

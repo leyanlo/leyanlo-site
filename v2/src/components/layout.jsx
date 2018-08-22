@@ -22,8 +22,14 @@ const Layout = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: 'Leyan Lo’s personal website' },
-            { name: 'keywords', content: 'software, violin, cubing' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+            { name: 'keywords', content: 'software, violin, cubing' }
+          ]}
+          link={[
+            {
+              rel: 'apple-touch-icon',
+              sizes: '180x180',
+              href: '/apple-touch-icon.png'
+            }
           ]}
         >
           <html lang="en" />
