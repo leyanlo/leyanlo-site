@@ -16,19 +16,23 @@ const Header = ({ siteTitle }) => (
         <h3 className="brand__title">{siteTitle}</h3>
       </Link>
       <nav className="navbar" role="navigation" aria-label="main navigation">
-        <Link to="/" className="navbar__item -hiddenTablet">
+        <Link
+          to="/"
+          className="navbar__item -hiddenTablet"
+          activeClassName="-active"
+        >
           <NavbarHome className="navbar__icon" />
           Home
         </Link>
-        <Link to="/software" className="navbar__item">
+        <Link to="/software" className="navbar__item" activeClassName="-active">
           <NavbarLaptop className="navbar__icon" />
           Software
         </Link>
-        <Link to="/violin" className="navbar__item">
+        <Link to="/violin" className="navbar__item" activeClassName="-active">
           <NavbarViolin className="navbar__icon" />
           Violin
         </Link>
-        <Link to="/cubing" className="navbar__item">
+        <Link to="/cubing" className="navbar__item" activeClassName="-active">
           <NavbarCubing className="navbar__icon" />
           Cubing
         </Link>
