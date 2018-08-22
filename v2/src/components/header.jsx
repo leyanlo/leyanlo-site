@@ -1,31 +1,46 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Container from './container';
+import { ReactComponent as Logo } from '../images/logo.svg';
+import { ReactComponent as NavbarHome } from '../images/navbar-home.svg';
+import { ReactComponent as NavbarLaptop } from '../images/navbar-laptop.svg';
+import { ReactComponent as NavbarViolin } from '../images/navbar-violin.svg';
+import { ReactComponent as NavbarCubing } from '../images/navbar-cubing.svg';
 
-import logo from './logo.svg';
-import './header.css';
-
-const Header = () => (
+const Header = ({ siteTitle }) => (
   <header className="header">
-    <Container>
+    <div className="container -header">
+      <Link to="/" className="brand">
+        <Logo className="brand__logo" />
+        <h3 className="brand__title">{siteTitle}</h3>
+      </Link>
       <nav className="navbar" role="navigation" aria-label="main navigation">
-        <Link to="/" className="navbar__item -brand">
-          <img src={logo} alt="logo" className="navbar__logo" />
+        <Link to="/" className="navbar__item">
+          <NavbarHome className="navbar__icon" />
+          Home
         </Link>
-        <div className="navbar__gap" />
         <Link to="/software" className="navbar__item">
+          <NavbarLaptop className="navbar__icon" />
           Software
         </Link>
         <Link to="/violin" className="navbar__item">
+          <NavbarViolin className="navbar__icon" />
           Violin
         </Link>
         <Link to="/cubing" className="navbar__item">
+          <NavbarCubing className="navbar__icon" />
           Cubing
         </Link>
       </nav>
-    </Container>
+      <div className="header__gap" />
+      {/* TODO: Add social media icons */}
+    </div>
   </header>
 );
+
+Header.propTypes = {
+  siteTitle: PropTypes.node.isRequired
+};
 
 export default Header;

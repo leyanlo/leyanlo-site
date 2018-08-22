@@ -1,0 +1,7 @@
+.main {
+  --mainHeight: calc(100vh - var(--headerHeight) - var(--navbarHeight));
+
+  display: flex;
+  flex-direction: column;
+  min-height: var(--mainHeight);
+}

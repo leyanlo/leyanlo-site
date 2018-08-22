@@ -1,0 +1,12 @@
+/* Normalize first */
+@import '../../node_modules/normalize.css/normalize.css';
+
+/* Base */
+@import 'base/generic.css';
+@import 'base/animations.css';
+
+/* Components */
+@import 'components/container.css';
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/main.css';

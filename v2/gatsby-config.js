@@ -24,9 +24,9 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-svgr',
       options: {
-        pathToConfigModule: `src/utils/typography.js`
+        icon: true
       }
     }
   ]

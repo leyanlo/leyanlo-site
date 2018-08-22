@@ -9,7 +9,7 @@ const IndexPage = () => (
       <h1>Leyan Lo</h1>
       <hr />
       <h3>Software engineer, violinist</h3>
-      <p>Former world record Rubik’s cube solver</p>
+      <p>Former world record Rubik’s&nbsp;cube&nbsp;solver</p>
     </Hero>
   </Layout>
 );

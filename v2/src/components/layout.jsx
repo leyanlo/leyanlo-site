@@ -3,11 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Container from './container';
-import Footer from './footer';
 import Header from './header';
-
-import './layout.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,15 +21,15 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' }
+            { name: 'description', content: 'Leyan Lo’s personal website' },
+            { name: 'keywords', content: 'software, violin, cubing' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' }
           ]}
         >
           <html lang="en" />
         </Helmet>
-        <Header />
-        <Container>{children}</Container>
-        <Footer />
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <main className="main">{children}</main>
       </>
     )}
   />
