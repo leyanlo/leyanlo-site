@@ -1,11 +1,23 @@
+@keyframes fadeForward {
+  from {
+    transform: scale(0.75);
+    opacity: 0.75;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @keyframes fadeUp {
   from {
-    transform: translate3d(0, 8px, 0) scale3d(0.98, 0.96, 1);
+    transform: translateY(8px);
     opacity: 0;
   }
 
   to {
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translateY(0);
     opacity: 1;
   }
 }

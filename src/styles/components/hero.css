@@ -1,4 +1,6 @@
 .hero {
+  --heroImageSize: 96px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,23 +10,28 @@
 
 .hero__card {
   position: relative;
-  margin: 64px 8px 0;
-  padding: 64px 32px 32px;
+  margin: calc(0.5 * var(--heroImageSize)) 8px 0;
+  padding: calc(0.5 * var(--heroImageSize)) 32px 32px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: fadeUp 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 .hero__image {
   position: absolute;
-  top: -64px;
+  top: calc(-0.5 * var(--heroImageSize));
   right: 0;
   left: 0;
-  width: 128px;
-  height: 128px;
+  width: var(--heroImageSize);
+  height: var(--heroImageSize);
   margin: 0 auto;
   border-radius: 50%;
   box-shadow: 0 0 0 2px white;
+  opacity: 0;
+  animation: fadeForward 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.hero__content {
+  opacity: 0;
+  animation: fadeUp 0.75s cubic-bezier(0.19, 1, 0.22, 1) forwards 0.25s;
 }
