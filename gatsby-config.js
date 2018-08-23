@@ -5,7 +5,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-svgr',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -22,6 +21,16 @@ module.exports = {
         theme_color: '#001F7F',
         display: 'minimal-ui',
         icon: 'src/images/logo.png'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        svgoConfig: {
+          plugins: {
+            removeViewBox: false
+          }
+        }
       }
     }
   ]
