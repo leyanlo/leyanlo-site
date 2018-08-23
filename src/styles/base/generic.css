@@ -26,11 +26,13 @@ a {
   fill: hsl(225, 100%, 25%);
 }
 
-a:hover {
-  opacity: 0.5;
-}
-
 hr {
   border: none;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+}
+
+@media screen and (min-width: 768px) {
+  a:hover {
+    opacity: 0.5;
+  }
 }
