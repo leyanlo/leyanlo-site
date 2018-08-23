@@ -1,11 +1,1 @@
-<svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <rect x="32" y="32" width="120" height="120"/>
-  <rect x="196" y="32" width="120" height="120"/>
-  <rect x="360" y="32" width="120" height="120"/>
-  <rect x="32" y="196" width="120" height="120"/>
-  <rect x="196" y="196" width="120" height="120"/>
-  <rect x="360" y="196" width="120" height="120"/>
-  <rect x="32" y="360" width="120" height="120"/>
-  <rect x="196" y="360" width="120" height="120"/>
-  <rect x="360" y="360" width="120" height="120"/>
-</svg>
+<svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m32 32h120v120h-120z"/><path d="m196 32h120v120h-120z"/><path d="m360 32h120v120h-120z"/><path d="m32 196h120v120h-120z"/><path d="m196 196h120v120h-120z"/><path d="m360 196h120v120h-120z"/><path d="m32 360h120v120h-120z"/><path d="m196 360h120v120h-120z"/><path d="m360 360h120v120h-120z"/></svg>
