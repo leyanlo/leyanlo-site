@@ -46,6 +46,7 @@ const Header = ({ siteTitle }) => (
         href="https://twitter.com/leyanlo"
         target="_blank"
         rel="noopener noreferrer"
+        className="header__iconWrapper"
       >
         <img src={headerTwitter} alt="Twitter icon" className="header__icon" />
       </a>
@@ -53,6 +54,7 @@ const Header = ({ siteTitle }) => (
         href="https://github.com/leyanlo"
         target="_blank"
         rel="noopener noreferrer"
+        className="header__iconWrapper"
       >
         <img src={headerGithub} alt="GitHub icon" className="header__icon" />
       </a>
@@ -60,6 +62,7 @@ const Header = ({ siteTitle }) => (
         href="https://www.linkedin.com/in/leyanlo/"
         target="_blank"
         rel="noopener noreferrer"
+        className="header__iconWrapper"
       >
         <img
           src={headerLinkedin}
@@ -71,6 +74,7 @@ const Header = ({ siteTitle }) => (
         href="mailto:leyanlo@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
+        className="header__iconWrapper"
       >
         <img src={headerEmail} alt="Email icon" className="header__icon" />
       </a>

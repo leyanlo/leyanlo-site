@@ -25,6 +25,10 @@ a {
   transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+a > * {
+  pointer-events: none;
+}
+
 hr {
   border: none;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
