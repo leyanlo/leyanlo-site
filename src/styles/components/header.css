@@ -29,6 +29,7 @@
   display: flex;
   width: 100%;
   height: var(--navbarHeight);
+  padding-bottom: env(safe-area-inset-bottom);
   background-color: hsl(225, 5%, 95%);
 }
 
