@@ -7,6 +7,10 @@ import navbarHome from '../images/navbar-home.svg';
 import navbarLaptop from '../images/navbar-laptop.svg';
 import navbarViolin from '../images/navbar-violin.svg';
 import navbarCubing from '../images/navbar-cubing.svg';
+import headerTwitter from '../images/header-twitter.svg';
+import headerGithub from '../images/header-github.svg';
+import headerLinkedin from '../images/header-linkedin.svg';
+import headerEmail from '../images/header-email.svg';
 
 const Header = ({ siteTitle }) => (
   <header className="header">
@@ -38,7 +42,38 @@ const Header = ({ siteTitle }) => (
         </Link>
       </nav>
       <div className="header__gap" />
-      {/* TODO: Add social media icons */}
+      <a
+        href="https://twitter.com/leyanlo"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={headerTwitter} alt="Twitter icon" className="header__icon" />
+      </a>
+      <a
+        href="https://github.com/leyanlo"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={headerGithub} alt="GitHub icon" className="header__icon" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/leyanlo/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={headerLinkedin}
+          alt="LinkedIn icon"
+          className="header__icon"
+        />
+      </a>
+      <a
+        href="mailto:leyanlo@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={headerEmail} alt="Email icon" className="header__icon" />
+      </a>
     </div>
   </header>
 );

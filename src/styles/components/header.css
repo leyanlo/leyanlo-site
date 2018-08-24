@@ -4,6 +4,7 @@
 
 .container.-header {
   display: flex;
+  align-items: center;
   height: var(--headerHeight);
 }
 
@@ -16,10 +17,6 @@
   width: 32px;
   height: 32px;
   margin-right: 10px;
-}
-
-.brand__title {
-  margin: 0 32px 0 0;
 }
 
 .navbar {
@@ -56,7 +53,18 @@
   flex-grow: 1;
 }
 
+.header__icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+  opacity: 0.8;
+}
+
 @media screen and (min-width: 768px) {
+  .brand__title {
+    margin: 0 32px 0 0;
+  }
+
   .navbar {
     position: initial;
     width: initial;
@@ -81,5 +89,9 @@
 
   .navbar__icon {
     display: none;
+  }
+
+  .header__icon {
+    margin: 0 12px;
   }
 }
