@@ -4,13 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--mainMinHeight);
+  min-height: var(--mainMinHeight);
   text-align: center;
 }
 
 .hero__card {
   position: relative;
-  margin: calc(0.5 * var(--heroImageSize)) 8px 0;
+  margin: calc(0.5 * var(--heroImageSize) + 16px) 0;
   padding: calc(0.5 * var(--heroImageSize)) 32px 32px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
