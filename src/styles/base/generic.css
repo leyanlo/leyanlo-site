@@ -25,6 +25,7 @@ a {
   transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/* Link children should not also be tap targets */
 a > * {
   pointer-events: none;
 }
@@ -34,7 +35,7 @@ hr {
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
 }
 
-/* For some reason the main div highlights on touch in iOS Safari */
+/* For some reason the main Gatsby div highlights on touch in iOS Safari */
 [tabindex='-1'] {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
