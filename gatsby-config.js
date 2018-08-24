@@ -26,16 +26,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-svgr`,
-      options: {
-        svgoConfig: {
-          plugins: {
-            removeViewBox: false
-          }
-        }
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
