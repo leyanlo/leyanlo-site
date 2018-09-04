@@ -110,6 +110,7 @@
   .navbar {
     position: initial;
     width: initial;
+    height: 100%;
     padding: 0;
     background-color: transparent;
   }
