@@ -12,7 +12,8 @@ const Software = () => (
         <p>I like building things! My interests include:</p>
         <ul>
           <li>Designing coherent UX systems</li>
-          <li>Streamlining build systems and refactoring codebases</li>
+          <li>Refactoring codebases</li>
+          <li>Streamlining build systems</li>
           <li>Building opinionated CSS frameworks</li>
           <li>Debugging minified code</li>
           <li>
