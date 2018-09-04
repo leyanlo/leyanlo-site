@@ -6,11 +6,12 @@ body {
   --safeAreaInsetBottom: env(safe-area-inset-bottom);
   --safeAreaInsetLeft: env(safe-area-inset-left);
   --linkColor: hsl(225, 100%, 50%);
+  --backgroundColor: hsl(225, 10%, 90%);
 
   color: hsla(0, 0%, 0%, 0.8);
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.25;
-  background-color: hsl(225, 10%, 90%);
+  background-color: var(--backgroundColor);
 }
 
 /* Tablet or landscape phone */

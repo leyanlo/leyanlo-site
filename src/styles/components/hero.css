@@ -6,6 +6,7 @@
   align-items: center;
   min-height: var(--mainMinHeight);
   text-align: center;
+  background-color: var(--backgroundColor);
 }
 
 .hero__card {

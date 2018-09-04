@@ -3,6 +3,10 @@
   padding: 0 8px;
 }
 
+.container.-main {
+  padding: 8px;
+}
+
 /* Constrain on larger screens */
 @media screen and (min-width: 976px) {
   .container {
