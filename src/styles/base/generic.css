@@ -8,6 +8,12 @@ body {
   background-color: hsl(225, 10%, 90%);
 }
 
+@media screen and (orientation: landscape) {
+  body {
+    --navbarHeight: 32px;
+  }
+}
+
 h1,
 h2,
 h3,
