@@ -32,8 +32,12 @@ const IndexPage = () => (
             <div className="hero__content">
               <h1>Leyan Lo</h1>
               <hr />
-              <h3>Software engineer, violinist</h3>
-              <p>Former world record Rubik’s&nbsp;cube&nbsp;solver</p>
+              <h3>Software engineer</h3>
+              <p>
+                Amateur violinist
+                <br />
+                Former world record Rubik’s&nbsp;cube&nbsp;solver
+              </p>
             </div>
           </div>
         </div>
