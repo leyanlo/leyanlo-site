@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   min-height: var(--mainMinHeight);
+  padding-right: var(--safeAreaInsetRight);
+  padding-left: var(--safeAreaInsetLeft);
 }
 
 /* Desktop */

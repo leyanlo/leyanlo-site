@@ -1,4 +1,6 @@
 .header {
+  padding-right: var(--safeAreaInsetRight);
+  padding-left: var(--safeAreaInsetLeft);
   background: white;
 }
 
@@ -33,7 +35,9 @@
   display: flex;
   width: 100%;
   height: var(--navbarHeight);
+  padding-right: var(--safeAreaInsetRight);
   padding-bottom: var(--safeAreaInsetBottom);
+  padding-left: var(--safeAreaInsetLeft);
   background-color: hsl(225, 5%, 95%);
 }
 
