@@ -6,6 +6,7 @@
   flex-direction: column;
   min-height: var(--mainMinHeight);
   padding-right: var(--safeAreaInsetRight);
+  padding-bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
   padding-left: var(--safeAreaInsetLeft);
 }
 

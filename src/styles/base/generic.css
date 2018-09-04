@@ -1,10 +1,10 @@
 body {
   --headerHeight: 48px;
   --navbarHeight: 48px;
-  --safeAreaInsetTop: env(safe-area-inset-top);
-  --safeAreaInsetRight: env(safe-area-inset-right);
-  --safeAreaInsetBottom: env(safe-area-inset-bottom);
-  --safeAreaInsetLeft: env(safe-area-inset-left);
+  --safeAreaInsetTop: 0px;
+  --safeAreaInsetRight: 0px;
+  --safeAreaInsetBottom: 0px;
+  --safeAreaInsetLeft: 0px;
   --linkColor: hsl(225, 100%, 50%);
   --backgroundColor: hsl(225, 10%, 90%);
   --zNavbar: 1;
@@ -13,6 +13,26 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.25;
   background-color: var(--backgroundColor);
+}
+
+/* Browsers which partially support CSS Environment variables (iOS 11.0-11.2) */
+@supports (padding-top: constant(safe-area-inset-top)) {
+  body {
+    --safeAreaInsetTop: constant(safe-area-inset-top);
+    --safeAreaInsetRight: constant(safe-area-inset-right);
+    --safeAreaInsetBottom: constant(safe-area-inset-bottom);
+    --safeAreaInsetLeft: constant(safe-area-inset-left);
+  }
+}
+
+/* Browsers which fully support CSS Environment variables (iOS 11.2+) */
+@supports (padding-top: env(safe-area-inset-top)) {
+  body {
+    --safeAreaInsetTop: env(safe-area-inset-top);
+    --safeAreaInsetRight: env(safe-area-inset-right);
+    --safeAreaInsetBottom: env(safe-area-inset-bottom);
+    --safeAreaInsetLeft: env(safe-area-inset-left);
+  }
 }
 
 /* Tablet or landscape phone */

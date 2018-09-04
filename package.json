@@ -56,12 +56,6 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default",
     "//": "TODO: finalize repo"
   },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-rational-order"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
