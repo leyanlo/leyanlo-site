@@ -19,10 +19,11 @@ h6 {
 }
 
 a {
-  color: hsl(225, 100%, 25%);
+  color: hsl(225, 100%, 50%);
   text-decoration: none;
   opacity: 0.8;
   transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  fill: hsl(225, 100%, 50%);
 }
 
 /* Link children should not also be tap targets */
