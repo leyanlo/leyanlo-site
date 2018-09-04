@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  filter: grayscale(1);
+  fill: black;
 }
 
 .header__icon {
