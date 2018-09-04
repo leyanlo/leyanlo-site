@@ -30,10 +30,11 @@
 
 .navbar {
   position: fixed;
+  right: 0;
   bottom: 0;
   left: 0;
+  z-index: var(--zNavbar);
   display: flex;
-  width: 100%;
   height: var(--navbarHeight);
   padding-right: var(--safeAreaInsetRight);
   padding-bottom: var(--safeAreaInsetBottom);
