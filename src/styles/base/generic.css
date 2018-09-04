@@ -45,6 +45,17 @@ a > * {
   pointer-events: none;
 }
 
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.link__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
 hr {
   border: none;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
