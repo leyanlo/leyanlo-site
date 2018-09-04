@@ -1,6 +1,10 @@
 body {
   --headerHeight: 48px;
   --navbarHeight: 48px;
+  --safeAreaInsetTop: env(safe-area-inset-top);
+  --safeAreaInsetRight: env(safe-area-inset-right);
+  --safeAreaInsetBottom: env(safe-area-inset-bottom);
+  --safeAreaInsetLeft: env(safe-area-inset-left);
 
   color: hsla(0, 0%, 0%, 0.8);
   font-family: 'Source Sans Pro', sans-serif;
@@ -8,7 +12,8 @@ body {
   background-color: hsl(225, 10%, 90%);
 }
 
-@media screen and (orientation: landscape) {
+/* Tablet or landscape phone */
+@media screen and (min-width: 769px), screen and (orientation: landscape) {
   body {
     --navbarHeight: 32px;
   }
@@ -51,7 +56,8 @@ hr {
   -webkit-tap-highlight-color: initial;
 }
 
-@media screen and (min-width: 768px) {
+/* Non-touchscreen */
+@media (hover: hover) {
   a:hover {
     opacity: 0.5;
   }

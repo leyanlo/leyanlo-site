@@ -33,7 +33,7 @@
   display: flex;
   width: 100%;
   height: var(--navbarHeight);
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: var(--safeAreaInsetBottom);
   background-color: hsl(225, 5%, 95%);
 }
 
@@ -74,7 +74,8 @@
   opacity: 0.8;
 }
 
-@media screen and (orientation: landscape) {
+/* Tablet or landscape phone */
+@media screen and (min-width: 769px), screen and (orientation: landscape) {
   .navbar__item {
     flex-direction: row;
     justify-content: center;
@@ -88,7 +89,8 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+/* Desktop */
+@media screen and (min-width: 1024px) {
   .brand__title {
     margin: 0 32px 0 0;
   }
