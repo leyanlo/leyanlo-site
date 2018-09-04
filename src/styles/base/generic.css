@@ -5,11 +5,12 @@ body {
   --safeAreaInsetRight: 0px;
   --safeAreaInsetBottom: 0px;
   --safeAreaInsetLeft: 0px;
-  --linkColor: hsl(225, 100%, 50%);
+  --textColor: hsla(0, 0%, 0%, 0.8);
+  --linkColor: hsla(225, 100%, 50%, 0.8);
   --backgroundColor: hsl(225, 10%, 90%);
   --zNavbar: 1;
 
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--textColor);
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.25;
   background-color: var(--backgroundColor);
@@ -42,6 +43,13 @@ body {
   }
 }
 
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  body {
+    --navbarHeight: 0px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -55,7 +63,6 @@ h6 {
 a {
   color: var(--linkColor);
   text-decoration: none;
-  opacity: 0.8;
   transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1);
   fill: var(--linkColor);
 }
