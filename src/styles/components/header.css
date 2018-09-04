@@ -42,12 +42,14 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
+  color: black;
   font-size: 80%;
-  filter: grayscale(1);
+  fill: black;
 }
 
 .navbar__item.-active {
-  filter: none;
+  color: var(--linkColor);
+  fill: var(--linkColor);
 }
 
 .navbar__icon {

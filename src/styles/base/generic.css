@@ -5,6 +5,7 @@ body {
   --safeAreaInsetRight: env(safe-area-inset-right);
   --safeAreaInsetBottom: env(safe-area-inset-bottom);
   --safeAreaInsetLeft: env(safe-area-inset-left);
+  --linkColor: hsl(225, 100%, 50%);
 
   color: hsla(0, 0%, 0%, 0.8);
   font-family: 'Source Sans Pro', sans-serif;
@@ -30,11 +31,11 @@ h6 {
 }
 
 a {
-  color: hsl(225, 100%, 50%);
+  color: var(--linkColor);
   text-decoration: none;
   opacity: 0.8;
   transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  fill: hsl(225, 100%, 50%);
+  fill: var(--linkColor);
 }
 
 /* Link children should not also be tap targets */
