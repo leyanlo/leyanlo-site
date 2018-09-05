@@ -28,6 +28,8 @@
   align-items: center;
   margin: 0;
   color: var(--textColor);
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .navbar {

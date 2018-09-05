@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
     <div className="container -header">
       <Link to="/" className="brand">
         <LogoIcon className="brand__logo" />
-        <h3 className="brand__title">{siteTitle}</h3>
+        <span className="brand__title">{siteTitle}</span>
       </Link>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <Link
