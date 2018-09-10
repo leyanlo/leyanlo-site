@@ -10,7 +10,7 @@ const IndexPage = () => (
       query {
         headshotFile: file(relativePath: { regex: "/headshot.jpg/" }) {
           childImageSharp {
-            fixed(width: 96, height: 96) {
+            fixed(width: 96, height: 96, quality: 90) {
               ...GatsbyImageSharpFixed
             }
           }
