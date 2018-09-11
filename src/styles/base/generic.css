@@ -76,15 +76,11 @@ a > * {
   pointer-events: none;
 }
 
-.link {
-  display: flex;
-  align-items: center;
-}
-
-.link__icon {
+.linkIcon {
   width: 16px;
   height: 16px;
-  margin-right: 4px;
+  margin: 2px 4px 2px 2px;
+  vertical-align: text-bottom;
 }
 
 hr {
