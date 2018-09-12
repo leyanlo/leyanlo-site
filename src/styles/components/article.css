@@ -1,5 +1,5 @@
 .article {
-  padding: 16px;
+  padding: 16px 16px 32px;
   background: white;
   opacity: 0;
   animation: fadeUp 0.75s cubic-bezier(0.19, 1, 0.22, 1) forwards;
@@ -27,7 +27,7 @@
 /* Desktop */
 @media screen and (min-width: 1024px) {
   .article {
-    padding: 48px;
+    padding: 48px 48px 96px;
   }
 
   .article__figure {
