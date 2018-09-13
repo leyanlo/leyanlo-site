@@ -27,7 +27,9 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.{js,jsx,md,yml}'",
+    "format": "npm-run-all -p format:js format:css",
+    "format:js": "prettier --write 'src/**/*.{js,jsx}'",
+    "format:css": "prettier --write 'src/**/*.css'",
     "lint": "npm-run-all -p lint:es lint:style",
     "lint:es": "eslint --fix --ignore-path .gitignore 'src/**/*.{js,jsx,md,yml}'",
     "lint:style": "stylelint --fix 'src/**/*.css'",
@@ -67,6 +69,7 @@
       "git add"
     ],
     "*.css": [
+      "prettier --write",
       "stylelint --fix",
       "git add"
     ]
