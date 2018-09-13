@@ -22,7 +22,7 @@
 
 .article__figcaption {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: var(--fontSmall);
 }
 
 /* Desktop */

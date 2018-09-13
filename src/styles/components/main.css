@@ -1,6 +1,8 @@
 .main {
   /* iOS Safari typically adds 112px of toolbars */
-  --mainMinHeight: calc(100vh - var(--headerHeight) - var(--navbarHeight) - 112px);
+  --mainMinHeight: calc(
+    100vh - var(--headerHeight) - var(--navbarHeight) - 112px
+  );
 
   display: flex;
   flex-direction: column;

@@ -27,9 +27,9 @@
   display: flex;
   align-items: center;
   margin: 0;
-  color: var(--textColor);
+  color: var(--darkGray);
   font-weight: 600;
-  font-size: 18px;
+  font-size: var(--fontLarge);
 }
 
 .navbar {
@@ -43,7 +43,7 @@
   padding-right: var(--safeAreaInsetRight);
   padding-bottom: var(--safeAreaInsetBottom);
   padding-left: var(--safeAreaInsetLeft);
-  background-color: hsl(225, 5%, 95%);
+  background-color: var(--navbarBackground);
 }
 
 .navbar__item {
@@ -51,9 +51,9 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
-  color: var(--textColor);
-  font-size: 80%;
-  fill: var(--textColor);
+  color: var(--darkGray);
+  font-size: var(--fontXSmall);
+  fill: var(--darkGray);
 }
 
 .navbar__item.-active {
@@ -75,7 +75,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  fill: var(--textColor);
+  fill: var(--darkGray);
 }
 
 .header__icon {
@@ -121,7 +121,7 @@
   .navbar__item {
     flex-direction: row;
     padding: 0 16px;
-    font-size: 100%;
+    font-size: var(--fontMedium);
     text-transform: uppercase;
   }
 

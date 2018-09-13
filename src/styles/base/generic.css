@@ -3,21 +3,35 @@
 }
 
 body {
+  /* Dimensions */
   --headerHeight: 48px;
   --navbarHeight: 48px;
+  --tabsHeight: 32px;
   --safeAreaInsetTop: 0px;
   --safeAreaInsetRight: 0px;
   --safeAreaInsetBottom: 0px;
   --safeAreaInsetLeft: 0px;
-  --textColor: hsla(0, 0%, 0%, 0.8);
+  --fontXSmall: 12px;
+  --fontSmall: 14px;
+  --fontMedium: 16px;
+  --fontLarge: 18px;
+
+  /* Colors */
+  --darkGray: hsla(0, 0%, 0%, 0.8);
+  --mediumGray: hsla(0, 0%, 0%, 0.4);
+  --lightGray: hsla(0, 0%, 0%, 0.2);
+  --xLightGray: hsla(0, 0%, 0%, 0.1);
   --linkColor: hsla(225, 100%, 50%, 0.8);
-  --backgroundColor: hsl(225, 10%, 90%);
+  --bodyBackground: hsl(225, 10%, 90%);
+  --navbarBackground: hsl(225, 5%, 95%);
+
+  /* Z-indices */
   --zNavbar: 1;
 
-  color: var(--textColor);
+  color: var(--darkGray);
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.25;
-  background-color: var(--backgroundColor);
+  background-color: var(--bodyBackground);
 }
 
 /* Browsers which partially support CSS Environment variables (iOS 11.0-11.2) */
@@ -60,7 +74,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: hsla(0, 0%, 0%, 1);
+  color: black;
   font-family: 'Source Serif Pro', serif;
 }
 
@@ -85,12 +99,12 @@ a > * {
 
 hr {
   border: none;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-bottom: 1px solid var(--lightGray);
 }
 
 /* For some reason the main Gatsby div highlights on touch in iOS Safari */
 [tabindex='-1'] {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 [tabindex='-1'] > * {
