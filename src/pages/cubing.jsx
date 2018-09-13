@@ -18,7 +18,7 @@ const Cubing = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          Official world records
+          Official records
         </a>
         <br />
         <br />
