@@ -17,6 +17,7 @@
   max-width: 560px;
   height: 56.25vw;
   max-height: 315px;
+  background: black;
 }
 
 .article__figcaption {
