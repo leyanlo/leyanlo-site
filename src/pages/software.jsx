@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-import ResumeIcon from '../images/icon-resume.svg';
+import FileIcon from '../images/icon-file.svg';
 
 const Software = () => (
   <Layout>
@@ -19,7 +19,7 @@ const Software = () => (
         </ul>
         <br />
         <a href="/leyan-lo-resume-2018-03-21.pdf">
-          <ResumeIcon className="linkIcon" />
+          <FileIcon className="linkIcon" />
           Download my resume
         </a>
       </article>
