@@ -43,3 +43,12 @@
   color: var(--linkColor);
   box-shadow: inset 0 -1px 0 0 var(--linkColor);
 }
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .tabs {
+    position: static;
+    justify-content: center;
+    box-shadow: none;
+  }
+}
