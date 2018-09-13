@@ -5,6 +5,13 @@
     "browser": true
   },
   "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external", "internal"]],
+        "newlines-between": "always"
+      }
+    ],
     "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
   }
 }
