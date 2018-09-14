@@ -22,8 +22,8 @@
   background-image: linear-gradient(
     to right,
     var(--navbarBackground),
-    transparent 16px,
-    transparent calc(100vw - 16px),
+    var(--navbarBackgroundTransparent) 16px,
+    var(--navbarBackgroundTransparent) calc(100vw - 16px),
     var(--navbarBackground)
   );
   pointer-events: none;
@@ -50,5 +50,9 @@
     position: static;
     justify-content: center;
     box-shadow: none;
+  }
+
+  .tabs::after {
+    display: none;
   }
 }

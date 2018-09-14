@@ -24,6 +24,7 @@ body {
   --linkColor: hsla(225, 100%, 50%, 0.8);
   --bodyBackground: hsl(225, 10%, 90%);
   --navbarBackground: hsl(225, 5%, 95%);
+  --navbarBackgroundTransparent: hsla(225, 5%, 95%, 0);
 
   /* Z-indices */
   --zNavbar: 1;
