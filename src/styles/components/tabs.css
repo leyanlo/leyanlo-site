@@ -1,6 +1,6 @@
 .tabs {
   position: fixed;
-  bottom: var(--navbarHeight);
+  bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
   z-index: var(--zNavbar);
   display: flex;
   width: 100%;
@@ -17,7 +17,7 @@
 
 .tabs::after {
   position: fixed;
-  bottom: calc(var(--navbarHeight) + 1px);
+  bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight) + 1px);
   left: 0;
   width: 100%;
   height: calc(var(--tabsHeight) - 1px);
