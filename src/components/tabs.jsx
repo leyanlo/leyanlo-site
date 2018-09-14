@@ -4,12 +4,12 @@ import React from 'react';
 const Tabs = () => (
   <ul className="tabs">
     {/* Make sure to name these so there is proper hinting on iPhone X */}
-    <li>
+    <li className="tabs__item">
       <Link to="/cubing" className="tabs__link" activeClassName="-active">
         Links
       </Link>
     </li>
-    <li>
+    <li className="tabs__item">
       <Link
         to="/cubing/beginner"
         className="tabs__link"
@@ -18,7 +18,7 @@ const Tabs = () => (
         Beginner solution
       </Link>
     </li>
-    <li>
+    <li className="tabs__item">
       <Link
         to="/cubing/intermediate"
         className="tabs__link"
@@ -27,7 +27,7 @@ const Tabs = () => (
         Intermediate algs
       </Link>
     </li>
-    <li>
+    <li className="tabs__item">
       <Link
         to="/cubing/advanced"
         className="tabs__link"
@@ -36,7 +36,7 @@ const Tabs = () => (
         Advanced algs
       </Link>
     </li>
-    <li>
+    <li className="tabs__item">
       <Link to="/cubing/bld" className="tabs__link" activeClassName="-active">
         Blindfold algs
       </Link>

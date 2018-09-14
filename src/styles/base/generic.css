@@ -122,6 +122,14 @@ hr {
   border-bottom: 1px solid var(--lightGray);
 }
 
+ul {
+  padding-left: 20px;
+}
+
+li {
+  padding-bottom: 0.25em;
+}
+
 /* For some reason the main Gatsby div highlights on touch in iOS Safari */
 [tabindex='-1'] {
   -webkit-tap-highlight-color: transparent;
@@ -135,5 +143,12 @@ hr {
 @media (hover: hover) {
   a:hover {
     opacity: 0.6;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  ul {
+    padding-left: 40px;
   }
 }
