@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Layout from '../components/layout';
 import FileIcon from '../images/icon-file.svg';
+import Layout from '../components/layout';
 
 const Software = () => (
   <Layout>

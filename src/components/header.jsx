@@ -1,16 +1,16 @@
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'gatsby';
 
+import HeaderEmailIcon from '../images/header-email.svg';
+import HeaderGithubIcon from '../images/header-github.svg';
+import HeaderLinkedinIcon from '../images/header-linkedin.svg';
+import HeaderTwitterIcon from '../images/header-twitter.svg';
 import LogoIcon from '../images/logo.svg';
+import NavbarCubingIcon from '../images/navbar-cubing.svg';
 import NavbarHomeIcon from '../images/navbar-home.svg';
 import NavbarLaptopIcon from '../images/navbar-laptop.svg';
 import NavbarViolinIcon from '../images/navbar-violin.svg';
-import NavbarCubingIcon from '../images/navbar-cubing.svg';
-import HeaderTwitterIcon from '../images/header-twitter.svg';
-import HeaderGithubIcon from '../images/header-github.svg';
-import HeaderLinkedinIcon from '../images/header-linkedin.svg';
-import HeaderEmailIcon from '../images/header-email.svg';
 
 const Header = ({ siteTitle }) => (
   <header className="header">

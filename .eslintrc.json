@@ -4,6 +4,7 @@
   "env": {
     "browser": true
   },
+  "plugins": ["sort-imports-es6-autofix"],
   "rules": {
     "import/order": [
       "error",
@@ -12,6 +13,14 @@
         "newlines-between": "always"
       }
     ],
-    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "sort-imports-es6-autofix/sort-imports-es6": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }
+    ]
   }
 }
