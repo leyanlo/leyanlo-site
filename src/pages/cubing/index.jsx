@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import Tabs from '../../components/tabs';
 
-const Cubing = () => (
+const CubingPage = () => (
   <Layout>
     <Tabs />
     <div className="container -main">
@@ -26,4 +26,4 @@ const Cubing = () => (
   </Layout>
 );
 
-export default Cubing;
+export default CubingPage;

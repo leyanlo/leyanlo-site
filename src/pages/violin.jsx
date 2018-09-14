@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-const Violin = () => (
+const ViolinPage = () => (
   <Layout>
     <div className="container -main">
       <article className="article">
@@ -29,4 +29,4 @@ const Violin = () => (
   </Layout>
 );
 
-export default Violin;
+export default ViolinPage;

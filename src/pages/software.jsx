@@ -3,7 +3,7 @@ import React from 'react';
 import FileIcon from '../images/icon-file.svg';
 import Layout from '../components/layout';
 
-const Software = () => (
+const SoftwarePage = () => (
   <Layout>
     <div className="container -main">
       <article className="article">
@@ -26,4 +26,4 @@ const Software = () => (
   </Layout>
 );
 
-export default Software;
+export default SoftwarePage;
