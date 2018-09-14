@@ -29,9 +29,17 @@ body {
   --zNavbar: 1;
 
   color: var(--darkGray);
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   line-height: 1.25;
+  letter-spacing: -0.03125em;
+  word-spacing: -0.03125em;
   background-color: var(--bodyBackground);
+}
+
+body.SourceSansPro {
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 0;
+  word-spacing: 0;
 }
 
 /* Browsers which partially support CSS Environment variables (iOS 11.0-11.2) */
@@ -75,7 +83,18 @@ h4,
 h5,
 h6 {
   color: black;
+  font-family: Palatino, serif;
+  letter-spacing: 0.01875em;
+}
+
+.SourceSerifPro h1,
+.SourceSerifPro h2,
+.SourceSerifPro h3,
+.SourceSerifPro h4,
+.SourceSerifPro h5,
+.SourceSerifPro h6 {
   font-family: 'Source Serif Pro', serif;
+  letter-spacing: 0;
 }
 
 a {

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "fontfaceobserver": "^2.0.13",
     "gatsby": "^2.0.0-rc.3",
     "gatsby-cli": "^2.0.0-rc.0",
     "gatsby-image": "^2.0.0-rc.0",
@@ -30,9 +31,9 @@
     "format": "npm-run-all -p format:js format:css",
     "format:js": "prettier --write 'src/**/*.{js,jsx}'",
     "format:css": "prettier --write 'src/**/*.css'",
-    "lint": "npm-run-all -p lint:es lint:style",
-    "lint:es": "eslint --fix --ignore-path .gitignore 'src/**/*.{js,jsx,md,yml}'",
-    "lint:style": "stylelint --fix 'src/**/*.css'",
+    "lint": "npm-run-all -p lint:js lint:css",
+    "lint:js": "eslint --fix --ignore-path .gitignore 'src/**/*.{js,jsx}'",
+    "lint:css": "stylelint --fix 'src/**/*.css'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
