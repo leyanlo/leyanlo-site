@@ -1,12 +1,13 @@
 .tabs {
   position: fixed;
   bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
+  left: 0;
   z-index: var(--zNavbar);
   display: flex;
   width: 100%;
   height: var(--tabsHeight);
   margin: 0;
-  padding: 0;
+  padding: 0 var(--safeAreaInsetRight) 0 var(--safeAreaInsetLeft);
   overflow-x: scroll;
   white-space: nowrap;
   list-style-type: none;
