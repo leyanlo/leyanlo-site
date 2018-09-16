@@ -16,15 +16,36 @@ const Navbar = () => (
       <NavbarHomeIcon className="navbar__icon" />
       Home
     </Link>
-    <Link to="/software" className="navbar__item" activeClassName="-active">
+    <Link
+      to="/software"
+      getProps={({ isPartiallyCurrent }) =>
+        isPartiallyCurrent
+          ? { className: 'navbar__item -active' }
+          : { className: 'navbar__item' }
+      }
+    >
       <NavbarLaptopIcon className="navbar__icon" />
       Software
     </Link>
-    <Link to="/violin" className="navbar__item" activeClassName="-active">
+    <Link
+      to="/violin"
+      getProps={({ isPartiallyCurrent }) =>
+        isPartiallyCurrent
+          ? { className: 'navbar__item -active' }
+          : { className: 'navbar__item' }
+      }
+    >
       <NavbarViolinIcon className="navbar__icon" />
       Violin
     </Link>
-    <Link to="/cubing" className="navbar__item" activeClassName="-active">
+    <Link
+      to="/cubing"
+      getProps={({ isPartiallyCurrent }) =>
+        isPartiallyCurrent
+          ? { className: 'navbar__item -active' }
+          : { className: 'navbar__item' }
+      }
+    >
       <NavbarCubingIcon className="navbar__icon" />
       Cubing
     </Link>
