@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from './header';
+import Tabs from './tabs';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, tabs }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -35,14 +36,27 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main className="main">{children}</main>
+        <main className={`main ${tabs ? '-hasTabs' : ''}`}>
+          {tabs && <Tabs tabs={tabs} />}
+          {children}
+        </main>
       </>
     )}
   />
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  tabs: PropTypes.arrayOf(
+    PropTypes.shape({
+      to: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    }).isRequired
+  )
+};
+
+Layout.defaultProps = {
+  tabs: null
 };
 
 export default Layout;

@@ -1,47 +1,27 @@
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const Tabs = () => (
+const Tabs = ({ tabs }) => (
   <ul className="tabs">
-    {/* Make sure to name these so there is proper hinting on iPhone X */}
-    <li className="tabs__item">
-      <Link to="/cubing" className="tabs__link" activeClassName="-active">
-        Links
-      </Link>
-    </li>
-    <li className="tabs__item">
-      <Link
-        to="/cubing/beginner"
-        className="tabs__link"
-        activeClassName="-active"
-      >
-        Beginner solution
-      </Link>
-    </li>
-    <li className="tabs__item">
-      <Link
-        to="/cubing/intermediate"
-        className="tabs__link"
-        activeClassName="-active"
-      >
-        Intermediate algs
-      </Link>
-    </li>
-    <li className="tabs__item">
-      <Link
-        to="/cubing/advanced"
-        className="tabs__link"
-        activeClassName="-active"
-      >
-        Advanced algs
-      </Link>
-    </li>
-    <li className="tabs__item">
-      <Link to="/cubing/bld" className="tabs__link" activeClassName="-active">
-        Blindfold algs
-      </Link>
-    </li>
+    {tabs &&
+      tabs.map(tab => (
+        <li className="tabs__item" key={tab.to}>
+          <Link to={tab.to} className="tabs__link" activeClassName="-active">
+            {tab.title}
+          </Link>
+        </li>
+      ))}
   </ul>
 );
+
+Tabs.propTypes = {
+  tabs: PropTypes.arrayOf(
+    PropTypes.shape({
+      to: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired
+};
 
 export default Tabs;

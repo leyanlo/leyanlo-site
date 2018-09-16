@@ -15,10 +15,16 @@
   padding-left: var(--safeAreaInsetLeft);
 }
 
+.main.-hasTabs {
+  --tabsHeight: 40px;
+}
+
 /* Desktop */
 @media screen and (min-width: 1024px) {
   .main {
     /* No toolbars */
     --mainMinHeight: calc(100vh - var(--headerHeight));
+
+    padding-bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
   }
 }

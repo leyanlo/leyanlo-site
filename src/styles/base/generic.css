@@ -6,7 +6,7 @@ body {
   /* Dimensions */
   --headerHeight: 48px;
   --navbarHeight: 48px;
-  --tabsHeight: 40px;
+  --tabsHeight: 0px;
   --safeAreaInsetTop: 0px;
   --safeAreaInsetRight: 0px;
   --safeAreaInsetBottom: 0px;
