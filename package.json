@@ -29,7 +29,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "npm-run-all -p format:js format:css",
-    "format:js": "prettier --write 'src/**/*.{js,jsx}'",
+    "format:js": "prettier --write 'src/**/*.{js,jsx,json}'",
     "format:css": "prettier --write 'src/**/*.css'",
     "lint": "npm-run-all -p lint:js lint:css",
     "lint:js": "eslint --fix --ignore-path .gitignore 'src/**/*.{js,jsx}'",
@@ -66,7 +66,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,md,yml}": [
+    "*.{js,jsx}": [
       "eslint --fix",
       "git add"
     ],
