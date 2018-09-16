@@ -2,11 +2,10 @@ import React from 'react';
 
 import FileIcon from '../../images/icon-file.svg';
 import Layout from '../../components/layout';
-import Tabs from '../../components/tabs';
+import cubingTabs from './cubing-tabs.json';
 
 const BeginnerPage = () => (
-  <Layout>
-    <Tabs />
+  <Layout tabs={cubingTabs}>
     <div className="container -main">
       <article className="article">
         <h1>Beginner solution</h1>

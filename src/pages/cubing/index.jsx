@@ -1,18 +1,10 @@
 import React from 'react';
 
 import Layout from '../../components/layout';
+import cubingTabs from './cubing-tabs.json';
 
 const CubingPage = () => (
-  // Make sure to name tabs so there is proper hinting on iPhone X
-  <Layout
-    tabs={[
-      { to: '/cubing', title: 'Links' },
-      { to: '/cubing/beginner', title: 'Beginner solution' },
-      { to: '/cubing/intermediate', title: 'Intermediate algs' },
-      { to: '/cubing/advanced', title: 'Advanced algs' },
-      { to: '/cubing/bld', title: 'Blindfold algs' }
-    ]}
-  >
+  <Layout tabs={cubingTabs}>
     <div className="container -main">
       <article className="article">
         <h1>Speedcubing</h1>

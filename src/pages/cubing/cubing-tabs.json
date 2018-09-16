@@ -1,0 +1,7 @@
+[
+  { "to": "/cubing", "title": "Links" },
+  { "to": "/cubing/beginner", "title": "Beginner solution" },
+  { "to": "/cubing/intermediate", "title": "Intermediate algs" },
+  { "to": "/cubing/advanced", "title": "Advanced algs" },
+  { "to": "/cubing/bld", "title": "Blindfold algs" }
+]
