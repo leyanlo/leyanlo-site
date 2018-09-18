@@ -25,10 +25,20 @@ const f2lCases = [
   { pattern: 'BB_BB_BR_RB_RR_RR_____Y____', alg: "U' R' U R2 U' R2' U R' F R F'" }
 ];
 
-const ollCases = [
+const ollEdgeCases = [
   { pattern: 'LUULFRLDD', alg: "F R U R' U' S R U R' U' f'" },
   { pattern: 'LUFFFFLDF', alg: "F R U R' U' F'" },
   { pattern: 'FFFFFRDDD', alg: "R' U' F' U F R" }
+];
+
+const ollCornerCases = [
+  { pattern: 'LFRFFFLFR', alg: "R' U' R U' R' U R U' R' U2 R  " },
+  { pattern: 'LFUFFFLFD', alg: "R U2' R2' U' R2 U' R2' U2' R" },
+  { pattern: 'FFUFFFFFD', alg: "R B L' B' R' B L B' " },
+  { pattern: 'FFFFFFDFD', alg: "R2 D R' U2 R D' R' U2 R'" },
+  { pattern: 'FFUFFFDFR', alg: "R' U' R U' R' U2 R " },
+  { pattern: 'UFRFFFFFD', alg: "R U R' U R U2' R'" },
+  { pattern: 'LFFFFFFFD', alg: "R B L B' R' B L' B' " }
 ];
 
 const IntermediatePage = () => (
@@ -53,7 +63,17 @@ const IntermediatePage = () => (
 
         <h2>Orient last layer edges</h2>
         <div className="algGrid">
-          {ollCases.map(ollCase => (
+          {ollEdgeCases.map(ollCase => (
+            <div className="algGrid__item" key={ollCase.pattern}>
+              <OllPattern pattern={ollCase.pattern} />
+              <b className="alg">{ollCase.alg}</b>
+            </div>
+          ))}
+        </div>
+
+        <h2>Orient last layer corners</h2>
+        <div className="algGrid">
+          {ollCornerCases.map(ollCase => (
             <div className="algGrid__item" key={ollCase.pattern}>
               <OllPattern pattern={ollCase.pattern} />
               <b className="alg">{ollCase.alg}</b>
