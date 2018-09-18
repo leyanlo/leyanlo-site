@@ -9,96 +9,65 @@ const CubingPage = () => (
       <article className="article">
         <h1>Speedcubing</h1>
         <p>
-          I set the world record for solving the Rubik’s cube in 2006 in 11.13
-          seconds. I also set seven world records for solving the Rubik’s cube
-          blindfolded.
+          I set the world record for solving the Rubik’s cube in 2006 in 11.13 seconds. I also set seven world records
+          for solving the Rubik’s cube blindfolded.
         </p>
-        <a
-          href="https://www.worldcubeassociation.org/persons/2004LOLE01?tab=records"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Official records
-        </a>
+        <p>
+          <a
+            href="https://www.worldcubeassociation.org/persons/2004LOLE01?tab=records"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Official records
+          </a>
+        </p>
         <h2>Videos</h2>
         <ul>
           <li>
             1/14/06:{' '}
-            <a
-              href="http://youtu.be/uNBFGl7ErJE"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="http://youtu.be/uNBFGl7ErJE" target="_blank" rel="noopener noreferrer">
               11.13 second speedsolve world record
             </a>
           </li>
           <li>
             1/23/06:{' '}
-            <a
-              href="/leyan-lo-imposter-on-letterman.mpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/leyan-lo-imposter-on-letterman.mpg" target="_blank" rel="noopener noreferrer">
               Late Show with David Letterman
             </a>
           </li>
           <li>
             1/24/06:{' '}
-            <a
-              href="/tonight-show-leyan-tyson.m4v"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/tonight-show-leyan-tyson.m4v" target="_blank" rel="noopener noreferrer">
               The Tonight Show with Jay Leno
             </a>
           </li>
           <li>
             3/11/06:{' '}
-            <a
-              href="http://youtu.be/JCkI2qh1SF4"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="http://youtu.be/JCkI2qh1SF4" target="_blank" rel="noopener noreferrer">
               1:28.82 blindfold solve world record
             </a>
           </li>
           <li>
             5/10/06:{' '}
-            <a
-              href="/2006-05-10-jeopardy.mpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/2006-05-10-jeopardy.mpg" target="_blank" rel="noopener noreferrer">
               Jeopardy question
             </a>
           </li>
           <li>
             11/28/06:{' '}
-            <a
-              href="/2006-11-28-zefrank.m4v"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/2006-11-28-zefrank.m4v" target="_blank" rel="noopener noreferrer">
               the show with zefrank
             </a>
           </li>
           <li>
             9/28/07:{' '}
-            <a
-              href="/2007-09-28-cnn-american-morning.mp4"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/2007-09-28-cnn-american-morning.mp4" target="_blank" rel="noopener noreferrer">
               CNN American Morning
             </a>
           </li>
           <li>
             1/16/09:{' '}
-            <a
-              href="/2009-01-16-abc-7.mp4"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/2009-01-16-abc-7.mp4" target="_blank" rel="noopener noreferrer">
               ABC News
             </a>
           </li>
@@ -137,11 +106,7 @@ const CubingPage = () => (
           </li>
           <li>
             2/2/07:{' '}
-            <a
-              href="/pacific-citizen-article.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/pacific-citizen-article.pdf" target="_blank" rel="noopener noreferrer">
               Pacific Citizen
             </a>
           </li>

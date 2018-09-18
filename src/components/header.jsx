@@ -18,20 +18,10 @@ const Header = ({ siteTitle }) => (
       </Link>
       <Navbar />
       <div className="header__gap" />
-      <a
-        href="https://twitter.com/leyanlo"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="header__iconWrapper"
-      >
+      <a href="https://twitter.com/leyanlo" target="_blank" rel="noopener noreferrer" className="header__iconWrapper">
         <HeaderTwitterIcon className="header__icon" />
       </a>
-      <a
-        href="https://github.com/leyanlo"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="header__iconWrapper"
-      >
+      <a href="https://github.com/leyanlo" target="_blank" rel="noopener noreferrer" className="header__iconWrapper">
         <HeaderGithubIcon className="header__icon" />
       </a>
       <a
@@ -42,12 +32,7 @@ const Header = ({ siteTitle }) => (
       >
         <HeaderLinkedinIcon className="header__icon" />
       </a>
-      <a
-        href="mailto:leyanlo@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="header__iconWrapper"
-      >
+      <a href="mailto:leyanlo@gmail.com" target="_blank" rel="noopener noreferrer" className="header__iconWrapper">
         <HeaderEmailIcon className="header__icon" />
       </a>
     </div>

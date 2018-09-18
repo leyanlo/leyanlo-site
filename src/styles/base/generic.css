@@ -83,6 +83,7 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: 0;
   color: black;
   font-family: Palatino, serif;
   letter-spacing: 0.01875em;
@@ -96,6 +97,10 @@ h6 {
 .SourceSerifPro h6 {
   font-family: 'Source Serif Pro', serif;
   letter-spacing: 0;
+}
+
+p {
+  margin: 0 0 24px;
 }
 
 a {
@@ -115,11 +120,6 @@ a > * {
   height: 16px;
   margin: 2px 4px 2px 2px;
   vertical-align: text-bottom;
-}
-
-hr {
-  border: none;
-  border-bottom: 1px solid var(--lightGray);
 }
 
 ul {

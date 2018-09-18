@@ -8,20 +8,14 @@ import NavbarViolinIcon from '../images/navbar-violin.svg';
 
 const Navbar = () => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
-    <Link
-      to="/"
-      className="navbar__item -hiddenTablet"
-      activeClassName="-active"
-    >
+    <Link to="/" className="navbar__item -hiddenTablet" activeClassName="-active">
       <NavbarHomeIcon className="navbar__icon" />
       Home
     </Link>
     <Link
       to="/software"
       getProps={({ isPartiallyCurrent }) =>
-        isPartiallyCurrent
-          ? { className: 'navbar__item -active' }
-          : { className: 'navbar__item' }
+        isPartiallyCurrent ? { className: 'navbar__item -active' } : { className: 'navbar__item' }
       }
     >
       <NavbarLaptopIcon className="navbar__icon" />
@@ -30,9 +24,7 @@ const Navbar = () => (
     <Link
       to="/violin"
       getProps={({ isPartiallyCurrent }) =>
-        isPartiallyCurrent
-          ? { className: 'navbar__item -active' }
-          : { className: 'navbar__item' }
+        isPartiallyCurrent ? { className: 'navbar__item -active' } : { className: 'navbar__item' }
       }
     >
       <NavbarViolinIcon className="navbar__icon" />
@@ -41,9 +33,7 @@ const Navbar = () => (
     <Link
       to="/cubing"
       getProps={({ isPartiallyCurrent }) =>
-        isPartiallyCurrent
-          ? { className: 'navbar__item -active' }
-          : { className: 'navbar__item' }
+        isPartiallyCurrent ? { className: 'navbar__item -active' } : { className: 'navbar__item' }
       }
     >
       <NavbarCubingIcon className="navbar__icon" />

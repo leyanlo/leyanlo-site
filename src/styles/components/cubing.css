@@ -1,0 +1,51 @@
+.algGrid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 736px;
+  margin: auto;
+}
+
+.algGrid__item {
+  display: flex;
+  flex-basis: 360px;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.f2lPattern {
+  width: 96px;
+  height: 96px;
+  margin-right: 16px;
+}
+
+.f2lTile {
+  fill: lightgray;
+  stroke: black;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
+
+.f2lTile.-W {
+  fill: white;
+}
+
+.f2lTile.-R {
+  fill: red;
+}
+
+.f2lTile.-B {
+  fill: blue;
+}
+
+.f2lTile.-O {
+  fill: orange;
+}
+
+.f2lTile.-G {
+  fill: green;
+}
+
+.f2lTile.-Y {
+  fill: yellow;
+}

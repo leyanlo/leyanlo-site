@@ -31,7 +31,7 @@ const IndexPage = () => (
             />
             <div className="hero__content">
               <h1>Leyan Lo</h1>
-              <hr />
+              <hr className="hero__hr" />
               <h3>Software engineer</h3>
               <p>
                 Amateur violinist

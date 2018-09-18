@@ -14,6 +14,7 @@
       }
     ],
     "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "react/no-array-index-key": "none",
     "sort-imports-es6-autofix/sort-imports-es6": [
       "error",
       {

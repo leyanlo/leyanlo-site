@@ -12,7 +12,7 @@
 .hero__card {
   position: relative;
   margin: calc(0.5 * var(--heroImageSize) + 16px) 8px;
-  padding: calc(0.5 * var(--heroImageSize)) 32px 32px;
+  padding: calc(0.5 * var(--heroImageSize) + 16px) 32px 32px;
   text-align: center;
   background-color: white;
   box-shadow: 0 2px 5px var(--xLightGray);
@@ -35,4 +35,10 @@
 .hero__content {
   opacity: 0;
   animation: fadeUp 0.75s cubic-bezier(0.19, 1, 0.22, 1) forwards 0.1s;
+}
+
+.hero__hr {
+  margin: 0 0 24px;
+  border: none;
+  border-bottom: 1px solid var(--lightGray);
 }

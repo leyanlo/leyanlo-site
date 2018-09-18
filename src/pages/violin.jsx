@@ -7,10 +7,7 @@ const ViolinPage = () => (
     <div className="container -main">
       <article className="article">
         <h1>Amateur violinist</h1>
-        <p>
-          I enjoy playing chamber music with friends, and sometimes I fall
-          asleep at concerts.
-        </p>
+        <p>I enjoy playing chamber music with friends, and sometimes I fall asleep at concerts.</p>
         <figure className="article__figure">
           <iframe
             title="Pinky Quartet plays Brahms Quartet in G minor, Op. 25 (iv. Rondo alla Zingarese)"
@@ -20,9 +17,7 @@ const ViolinPage = () => (
             allow="autoplay; encrypted-media"
             allowFullScreen
           />
-          <figcaption className="article__figcaption">
-            2017 SLSQ Seminar at Stanford
-          </figcaption>
+          <figcaption className="article__figcaption">2017 SLSQ Seminar at Stanford</figcaption>
         </figure>
       </article>
     </div>
