@@ -1,13 +1,16 @@
 .algGrid {
+  /* Just enough so you can fit two on a landscape iPhone X */
+  --maxGridWidth: 692px;
+
   display: flex;
   flex-wrap: wrap;
-  max-width: 720px;
+  max-width: var(--maxGridWidth);
   margin: 0 auto 32px;
 }
 
 .algGrid__item {
   display: flex;
-  flex-basis: 360px;
+  flex-basis: calc(var(--maxGridWidth) / 2);
   align-items: center;
   margin-bottom: 8px;
 }
