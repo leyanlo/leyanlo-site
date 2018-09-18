@@ -1,17 +1,12 @@
 .main {
   /* iOS Safari typically adds 112px of toolbars */
-  --mainMinHeight: calc(
-    100vh - var(--headerHeight) - var(--navbarHeight) - var(--tabsHeight) -
-      112px
-  );
+  --mainMinHeight: calc(100vh - var(--headerHeight) - var(--navbarHeight) - var(--tabsHeight) - 112px);
 
   display: flex;
   flex-direction: column;
   min-height: var(--mainMinHeight);
   padding-right: var(--safeAreaInsetRight);
-  padding-bottom: calc(
-    var(--safeAreaInsetBottom) + var(--navbarHeight) + var(--tabsHeight)
-  );
+  padding-bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight) + var(--tabsHeight));
   padding-left: var(--safeAreaInsetLeft);
 }
 
