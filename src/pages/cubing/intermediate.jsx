@@ -3,6 +3,7 @@ import React from 'react';
 import F2lPattern from '../../components/cubing/f2l-pattern';
 import Layout from '../../components/layout';
 import OllPattern from '../../components/cubing/oll-pattern';
+import PllPattern from '../../components/cubing/pll-pattern';
 import cubingTabs from './cubing-tabs.json';
 
 const f2lCases = [
@@ -32,13 +33,18 @@ const ollEdgeCases = [
 ];
 
 const ollCornerCases = [
-  { pattern: 'LFRFFFLFR', alg: "R' U' R U' R' U R U' R' U2 R  " },
+  { pattern: 'LFRFFFLFR', alg: "R' U' R U' R' U R U' R' U2 R" },
   { pattern: 'LFUFFFLFD', alg: "R U2' R2' U' R2 U' R2' U2' R" },
-  { pattern: 'FFUFFFFFD', alg: "R B L' B' R' B L B' " },
+  { pattern: 'FFUFFFFFD', alg: "R B L' B' R' B L B'" },
   { pattern: 'FFFFFFDFD', alg: "R2 D R' U2 R D' R' U2 R'" },
-  { pattern: 'FFUFFFDFR', alg: "R' U' R U' R' U2 R " },
+  { pattern: 'FFUFFFDFR', alg: "R' U' R U' R' U2 R" },
   { pattern: 'UFRFFFFFD', alg: "R U R' U R U2' R'" },
-  { pattern: 'LFFFFFFFD', alg: "R B L B' R' B L' B' " }
+  { pattern: 'LFFFFFFFD', alg: "R B L B' R' B L' B'" }
+];
+
+const pllCornerCases = [
+  { pattern: [[7, 9], [9, 7]], alg: "R' F R' B2 R F' R' B2 R2 U2" },
+  { pattern: [[1, 3], [3, 1], [7, 9], [9, 7]], alg: "L U' R U2' L' U R' L U' R U2' L' U R'" }
 ];
 
 const IntermediatePage = () => (
@@ -77,6 +83,16 @@ const IntermediatePage = () => (
             <div className="algGrid__item" key={ollCase.pattern}>
               <OllPattern pattern={ollCase.pattern} />
               <b className="alg">{ollCase.alg}</b>
+            </div>
+          ))}
+        </div>
+
+        <h2>Permute last layer corners</h2>
+        <div className="algGrid">
+          {pllCornerCases.map(pllCase => (
+            <div className="algGrid__item" key={pllCase.pattern}>
+              <PllPattern pattern={pllCase.pattern} />
+              <b className="alg">{pllCase.alg}</b>
             </div>
           ))}
         </div>

@@ -1,16 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-class Point {
-  /**
-   * @param {number} x
-   * @param {number} y
-   */
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-}
+import Point from './point';
 
 class Tile {
   /**
@@ -36,28 +27,6 @@ const DFR = new Point(142, 195);
 const DBR = new Point(186, 134);
 
 /**
- * @param {number} v0
- * @param {number} v1
- * @param {number} t Between 0 and 1
- * @return {number}
- */
-function lerp(v0, v1, t) {
-  return v0 * (1 - t) + v1 * t;
-}
-
-/**
- * @param {Point} p0
- * @param {Point} p1
- * @param {number} t Between 0 and 1
- * @returns {Point}
- */
-function lerpPoint(p0, p1, t) {
-  const newX = lerp(p0.x, p1.x, t);
-  const newY = lerp(p0.y, p1.y, t);
-  return new Point(newX, newY);
-}
-
-/**
  * @param {Point} p1
  * @param {Point} p2
  * @param {Point} p3
@@ -65,10 +34,10 @@ function lerpPoint(p0, p1, t) {
  * @return {Tile[]}
  */
 function getRowTiles(p1, p2, p3, p4) {
-  const p1a = lerpPoint(p1, p2, 1 / 3);
-  const p1b = lerpPoint(p1, p2, 2 / 3);
-  const p3a = lerpPoint(p3, p4, 1 / 3);
-  const p3b = lerpPoint(p3, p4, 2 / 3);
+  const p1a = Point.lerp(p1, p2, 1 / 3);
+  const p1b = Point.lerp(p1, p2, 2 / 3);
+  const p3a = Point.lerp(p3, p4, 1 / 3);
+  const p3b = Point.lerp(p3, p4, 2 / 3);
 
   return [new Tile(p1, p1a, p3b, p4), new Tile(p1a, p1b, p3a, p3b), new Tile(p1b, p2, p3, p3a)];
 }
@@ -81,10 +50,10 @@ function getRowTiles(p1, p2, p3, p4) {
  * @returns {Tile[]}
  */
 function getFaceTiles(p1, p2, p3, p4) {
-  const p2a = lerpPoint(p2, p3, 1 / 3);
-  const p2b = lerpPoint(p2, p3, 2 / 3);
-  const p4a = lerpPoint(p4, p1, 1 / 3);
-  const p4b = lerpPoint(p4, p1, 2 / 3);
+  const p2a = Point.lerp(p2, p3, 1 / 3);
+  const p2b = Point.lerp(p2, p3, 2 / 3);
+  const p4a = Point.lerp(p4, p1, 1 / 3);
+  const p4b = Point.lerp(p4, p1, 2 / 3);
 
   return [...getRowTiles(p1, p2, p2a, p4b), ...getRowTiles(p4b, p2a, p2b, p4a), ...getRowTiles(p4a, p2b, p3, p4)];
 }

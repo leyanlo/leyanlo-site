@@ -68,6 +68,17 @@
   stroke-width: 2px;
 }
 
+.pllTile {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 4px;
+}
+
+.pllArrow {
+  stroke: black;
+  stroke-width: 2px;
+}
+
 .alg {
   margin: 0 8px;
   font-size: var(--fontLarge);

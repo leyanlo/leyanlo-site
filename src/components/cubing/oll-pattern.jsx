@@ -11,16 +11,16 @@ const tileSize = 44;
  */
 const OllPattern = ({ pattern }) => {
   const p = pattern.split('');
-  const tiles = [];
+  const svgEls = [];
   for (let i = 0; i < p.length; ++i) {
     const x = tileStart + tileSize * (i % 3);
     const y = tileStart + tileSize * Math.floor(i / 3);
-    tiles.push(
+    svgEls.push(
       <rect x={x} y={y} width={tileSize} height={tileSize} className={`ollTile -${p[i]}`} key={`${pattern}-${i}`} />
     );
     switch (p[i]) {
       case 'L':
-        tiles.push(
+        svgEls.push(
           <rect
             x={x - 11}
             y={y + 3}
@@ -32,7 +32,7 @@ const OllPattern = ({ pattern }) => {
         );
         break;
       case 'U':
-        tiles.push(
+        svgEls.push(
           <rect
             x={x + 3}
             y={y - 11}
@@ -44,7 +44,7 @@ const OllPattern = ({ pattern }) => {
         );
         break;
       case 'R':
-        tiles.push(
+        svgEls.push(
           <rect
             x={x + tileSize + 5}
             y={y + 3}
@@ -56,7 +56,7 @@ const OllPattern = ({ pattern }) => {
         );
         break;
       case 'D':
-        tiles.push(
+        svgEls.push(
           <rect
             x={x + 3}
             y={y + tileSize + 5}
@@ -72,7 +72,7 @@ const OllPattern = ({ pattern }) => {
   }
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" className="algPattern">
-      {tiles}
+      {svgEls}
     </svg>
   );
 };
