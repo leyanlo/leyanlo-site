@@ -47,6 +47,13 @@ const pllCornerCases = [
   { pattern: [[1, 3], [3, 1], [7, 9], [9, 7]], alg: "L U' R U2' L' U R' L U' R U2' L' U R'" }
 ];
 
+const pllEdgeCases = [
+  { pattern: [[2, 6], [6, 4], [4, 2]], alg: "R' U R' U' R' U' R' U R U R2" },
+  { pattern: [[2, 4], [4, 6], [6, 2]], alg: "R2 U' R' U' R U R U R U' R" },
+  { pattern: [[2, 6], [6, 2], [4, 8], [8, 4]], alg: "U R B' R' B F R' F B' R' B R F2'" },
+  { pattern: [[2, 8], [8, 2], [4, 6], [6, 4]], alg: "M2 U' M2 U2' M" }
+];
+
 const IntermediatePage = () => (
   <Layout tabs={cubingTabs}>
     <div className="container -main">
@@ -90,6 +97,16 @@ const IntermediatePage = () => (
         <h2>Permute last layer corners</h2>
         <div className="algGrid">
           {pllCornerCases.map(pllCase => (
+            <div className="algGrid__item" key={pllCase.pattern}>
+              <PllPattern pattern={pllCase.pattern} />
+              <b className="alg">{pllCase.alg}</b>
+            </div>
+          ))}
+        </div>
+
+        <h2>Permute last layer edges</h2>
+        <div className="algGrid">
+          {pllEdgeCases.map(pllCase => (
             <div className="algGrid__item" key={pllCase.pattern}>
               <PllPattern pattern={pllCase.pattern} />
               <b className="alg">{pllCase.alg}</b>
