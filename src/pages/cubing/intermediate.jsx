@@ -2,6 +2,7 @@ import React from 'react';
 
 import F2lPattern from '../../components/cubing/f2l-pattern';
 import Layout from '../../components/layout';
+import OllPattern from '../../components/cubing/oll-pattern';
 import cubingTabs from './cubing-tabs.json';
 
 const f2lCases = [
@@ -24,6 +25,12 @@ const f2lCases = [
   { pattern: 'BB_BB_BR_RB_RR_RR_____Y____', alg: "U' R' U R2 U' R2' U R' F R F'" }
 ];
 
+const ollCases = [
+  { pattern: 'LUULFRLDD', alg: "F R U R' U' S R U R' U' f'" },
+  { pattern: 'LUFFFFLDF', alg: "F R U R' U' F'" },
+  { pattern: 'FFFFFRDDD', alg: "R' U' F' U F R" }
+];
+
 const IntermediatePage = () => (
   <Layout tabs={cubingTabs}>
     <div className="container -main">
@@ -33,12 +40,23 @@ const IntermediatePage = () => (
           Here are a few algorithms selected from the Fridrich solution that you can learn to improve your times after
           mastering the beginner’s solution.
         </p>
+
         <h2>First two layers</h2>
         <div className="algGrid">
           {f2lCases.map(f2lCase => (
             <div className="algGrid__item" key={f2lCase.pattern}>
               <F2lPattern pattern={f2lCase.pattern} />
-              <div className="alg">{f2lCase.alg}</div>
+              <b className="alg">{f2lCase.alg}</b>
+            </div>
+          ))}
+        </div>
+
+        <h2>Orient last layer edges</h2>
+        <div className="algGrid">
+          {ollCases.map(ollCase => (
+            <div className="algGrid__item" key={ollCase.pattern}>
+              <OllPattern pattern={ollCase.pattern} />
+              <b className="alg">{ollCase.alg}</b>
             </div>
           ))}
         </div>

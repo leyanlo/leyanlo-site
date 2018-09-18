@@ -13,6 +13,7 @@
         "newlines-between": "always"
       }
     ],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
     "react/no-array-index-key": "none",
     "sort-imports-es6-autofix/sort-imports-es6": [

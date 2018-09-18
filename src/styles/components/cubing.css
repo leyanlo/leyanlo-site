@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 720px;
-  margin: auto;
+  margin: 0 auto 32px;
 }
 
 .algGrid__item {
@@ -12,10 +12,10 @@
   margin-bottom: 8px;
 }
 
-.f2lPattern {
-  width: 96px;
-  height: 96px;
-  margin: 0 16px;
+.algPattern {
+  width: 100px;
+  height: 100px;
+  margin: 0 8px;
 }
 
 .f2lTile {
@@ -47,4 +47,25 @@
 
 .f2lTile.-Y {
   fill: yellow;
+}
+
+.ollTile {
+  fill: lightgray;
+  stroke: black;
+  stroke-width: 4px;
+}
+
+.ollTile.-F {
+  fill: yellow;
+}
+
+.ollTileSide {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.alg {
+  margin: 0 8px;
+  font-size: var(--fontLarge);
 }
