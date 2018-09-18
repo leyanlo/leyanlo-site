@@ -28,10 +28,10 @@ const PllPattern = ({ pattern }) => {
     const arrowEnd = Point.lerpBy(centerEnd, centerStart, 12);
     svgEls.push(
       <line
-        x1={arrowStart.x}
-        y1={arrowStart.y}
-        x2={arrowEnd.x}
-        y2={arrowEnd.y}
+        x1={arrowStart.x.toFixed(2)}
+        y1={arrowStart.y.toFixed(2)}
+        x2={arrowEnd.x.toFixed(2)}
+        y2={arrowEnd.y.toFixed(2)}
         className="pllArrow"
         markerEnd="url(#arrowHead)"
         key={`${pattern}-arrow-${i}`}
