@@ -17,7 +17,7 @@ const SoftwarePage = () => (
           <li>Building a prettier git log</li>
         </ul>
         <br />
-        <a href="/leyan-lo-resume-2018-03-21.pdf">
+        <a href="/docs/leyan-lo-resume-2018-03-21.pdf">
           <FileIcon className="linkIcon" />
           Download my resume
         </a>
