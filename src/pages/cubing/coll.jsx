@@ -224,7 +224,7 @@ const collCases = [
       { label: 'B', color: 'G', leftColor: 'Y' },
       { label: 'F', color: 'B', bottomColor: 'Y' }
     ],
-    alg: "R2' F2 r U r' F R2 U2' B' R B R'",
+    alg: "y R2' F2 r U r' F R2 U2' B' R B R'",
     comments: ['Inverse of COLL H4']
   },
   {
@@ -265,7 +265,7 @@ const collCases = [
     pattern: [
       { label: 'R', color: 'R', leftColor: 'Y' },
       { label: 'B', color: 'G', topColor: 'Y' },
-      { label: 'B', color: 'G', leftColor: 'Y' },
+      { label: 'F', color: 'B', leftColor: 'Y' },
       { label: 'R', color: 'R', bottomColor: 'Y' }
     ],
     alg: "y R U2' R' U' R U' R2' U L U' R U L'",
