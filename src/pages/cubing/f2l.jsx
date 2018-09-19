@@ -77,9 +77,9 @@ const F2LPage = () => (
         <div className="algGrid">
           {f2lCases.map(f2lCase => (
             <div className="algGrid__item" key={f2lCase.id}>
-              <b className="algGrid__id">{f2lCase.id}</b>
+              <span className="algGrid__id">{f2lCase.id}</span>
               <F2lPattern pattern={f2lCase.pattern} />
-              <b className="algGrid__alg">
+              <b className="algGrid__algs">
                 {f2lCase.algs.map((alg, i) => (
                   <span key={`${f2lCase.id}-${i}`}>
                     {alg}

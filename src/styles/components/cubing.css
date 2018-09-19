@@ -16,7 +16,9 @@
 }
 
 .algGrid__id {
-  flex-basis: 20px;
+  flex-shrink: 0;
+  flex-basis: 18px;
+  margin-left: 8px;
   font-size: var(--fontLarge);
 }
 
@@ -84,7 +86,7 @@
   stroke-width: 2px;
 }
 
-.algGrid__alg {
+.algGrid__algs {
   margin-left: 8px;
   font-size: var(--fontLarge);
 }
