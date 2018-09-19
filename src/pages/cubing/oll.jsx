@@ -242,9 +242,9 @@ const OllPage = () => (
                 <br />
                 <small className="algGrid__comments">
                   {ollCase.comments.map((comment, i) => (
-                    <span key={i}>
+                    <span key={`${ollCase.id}-${i}`}>
                       {reactStringReplace(comment, /(OLL \d+)/g, (match, j) => (
-                        <a href={`#${match.replace(/^OLL /, '')}`} key={j}>
+                        <a href={`#${match.replace(/^OLL /, '')}`} key={`${ollCase.id}-${i}-${j}`}>
                           {match}
                         </a>
                       ))}
