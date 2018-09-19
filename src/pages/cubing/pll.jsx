@@ -126,7 +126,7 @@ const PllPage = () => (
         <div className="algGrid">
           {pllCases.map(pllCase => (
             <div className="algGrid__item" key={pllCase.pattern}>
-              <a href={`#${pllCase.id}`} name={pllCase.id} className="algGrid__id">
+              <a href={`#${pllCase.id}`} name={pllCase.id} className="algGrid__id -pll">
                 {pllCase.id}
               </a>
               <PllPattern pattern={pllCase.pattern} />
