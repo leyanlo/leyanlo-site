@@ -21,6 +21,7 @@ const CollPattern = ({ pattern }) => {
     const x = tileStart + tileSize * (i % 3);
     const y = tileStart + tileSize * Math.floor(i / 3);
 
+    // Draw tile
     let corner;
     switch (i) {
       case 0:
@@ -36,64 +37,87 @@ const CollPattern = ({ pattern }) => {
         corner = bottomRight;
         break;
       default:
-        corner = null;
+        corner = { color: 'Y' };
     }
-
-    let tileClassName;
-    if (corner) {
-      tileClassName = `collTile -${corner.color}`;
-      if (corner.leftColor) {
-        svgEls.push(
-          <rect
-            x={x - 11}
-            y={y + 3}
-            width="6"
-            height={tileSize - 6}
-            className={`collTile -side -${corner.leftColor}`}
-            key={`${pattern}-${i}-side`}
-          />
-        );
-      } else if (corner.topColor) {
-        svgEls.push(
-          <rect
-            x={x + 3}
-            y={y - 11}
-            width={tileSize - 6}
-            height="6"
-            className={`collTile -side -${corner.topColor}`}
-            key={`${pattern}-${i}-side`}
-          />
-        );
-      } else if (corner.rightColor) {
-        svgEls.push(
-          <rect
-            x={x + tileSize + 5}
-            y={y + 3}
-            width="6"
-            height={tileSize - 6}
-            className={`collTile -side -${corner.rightColor}`}
-            key={`${pattern}-${i}-side`}
-          />
-        );
-      } else if (corner.bottomColor) {
-        svgEls.push(
-          <rect
-            x={x + 3}
-            y={y + tileSize + 5}
-            width={tileSize - 6}
-            height="6"
-            className={`collTile -side -${corner.bottomColor}`}
-            key={`${pattern}-${i}-side`}
-          />
-        );
-      }
-    } else {
-      tileClassName = 'collTile -Y';
-    }
-
+    const tileClassName = `collTile -${corner.color}`;
     svgEls.push(
       <rect x={x} y={y} width={tileSize} height={tileSize} className={tileClassName} key={`${pattern}-${i}`} />
     );
+
+    // Draw label
+    if (corner.label) {
+      if (corner.label.length === 1) {
+        svgEls.push(
+          <text x={x + tileSize / 2} y={y + tileSize / 2} dy={12} fontSize={36} fontWeight={600} textAnchor="middle">
+            {corner.label}
+          </text>
+        );
+      } else if (corner.label.length === 2) {
+        svgEls.push(
+          <text x={x + tileSize / 4} y={y + (tileSize * 3) / 4} dx={1} dy={3} fontSize={24} textAnchor="middle">
+            {corner.label.charAt(0)}
+          </text>
+        );
+        svgEls.push(
+          <text x={x + (tileSize * 3) / 4} y={y + tileSize / 4} dx={-2} dy={12} fontSize={24} textAnchor="middle">
+            {corner.label.charAt(1)}
+          </text>
+        );
+      }
+    }
+
+    // Draw side
+    if (corner.leftColor) {
+      svgEls.push(
+        <rect
+          x={x - 11}
+          y={y + 3}
+          width={6}
+          height={tileSize - 6}
+          className={`collTile -side -${corner.leftColor}`}
+          key={`${pattern}-${i}-side`}
+        />
+      );
+    }
+
+    if (corner.topColor) {
+      svgEls.push(
+        <rect
+          x={x + 3}
+          y={y - 11}
+          width={tileSize - 6}
+          height={6}
+          className={`collTile -side -${corner.topColor}`}
+          key={`${pattern}-${i}-side`}
+        />
+      );
+    }
+
+    if (corner.rightColor) {
+      svgEls.push(
+        <rect
+          x={x + tileSize + 5}
+          y={y + 3}
+          width={6}
+          height={tileSize - 6}
+          className={`collTile -side -${corner.rightColor}`}
+          key={`${pattern}-${i}-side`}
+        />
+      );
+    }
+
+    if (corner.bottomColor) {
+      svgEls.push(
+        <rect
+          x={x + 3}
+          y={y + tileSize + 5}
+          width={tileSize - 6}
+          height={6}
+          className={`collTile -side -${corner.bottomColor}`}
+          key={`${pattern}-${i}-side`}
+        />
+      );
+    }
   }
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" className="algPattern">
