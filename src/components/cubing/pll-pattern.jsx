@@ -25,7 +25,7 @@ const PllPattern = ({ pattern }) => {
     const centerStart = tileCenters[arrow[0] - 1];
     const centerEnd = tileCenters[arrow[1] - 1];
     const arrowStart = Point.lerpBy(centerStart, centerEnd, 12);
-    const arrowEnd = Point.lerpBy(centerEnd, centerStart, 12);
+    const arrowEnd = Point.lerpBy(centerEnd, centerStart, 16);
     svgEls.push(
       <line
         x1={arrowStart.x.toFixed(2)}
