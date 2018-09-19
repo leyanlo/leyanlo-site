@@ -1,10 +1,10 @@
 [
-  { "to": "/cubing", "title": "Links" },
-  { "to": "/cubing/beginner", "title": "Beginner solution" },
-  { "to": "/cubing/intermediate", "title": "Intermediate algs" },
-  { "to": "/cubing/f2l", "title": "F2L" },
-  { "to": "/cubing/oll", "title": "OLL" },
-  { "to": "/cubing/pll", "title": "PLL" },
-  { "to": "/cubing/coll", "title": "COLL" },
-  { "to": "/cubing/bld", "title": "Blindfold" }
+  { "to": "/cubing/", "title": "Links", "isBase": true },
+  { "to": "/cubing/beginner/", "title": "Beginner solution" },
+  { "to": "/cubing/intermediate/", "title": "Intermediate algs" },
+  { "to": "/cubing/f2l/", "title": "F2L" },
+  { "to": "/cubing/oll/", "title": "OLL" },
+  { "to": "/cubing/pll/", "title": "PLL" },
+  { "to": "/cubing/coll/", "title": "COLL" },
+  { "to": "/cubing/bld/", "title": "Blindfold" }
 ]

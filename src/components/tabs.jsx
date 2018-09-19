@@ -5,13 +5,24 @@ import React from 'react';
 const Tabs = ({ tabs }) => (
   <ul className="tabs">
     {tabs &&
-      tabs.map(tab => (
-        <li className="tabs__item" key={tab.to}>
-          <Link to={tab.to} className="tabs__link" activeClassName="-active">
-            {tab.title}
-          </Link>
-        </li>
-      ))}
+      tabs.map(tab => {
+        let linkProps;
+        if (tab.isBase) {
+          linkProps = { className: 'tabs__link', activeClassName: '-active' };
+        } else {
+          linkProps = {
+            getProps: ({ isPartiallyCurrent }) =>
+              isPartiallyCurrent ? { className: 'tabs__link -active' } : { className: 'tabs__link' }
+          };
+        }
+        return (
+          <li className="tabs__item" key={tab.to}>
+            <Link to={tab.to} {...linkProps}>
+              {tab.title}
+            </Link>
+          </li>
+        );
+      })}
   </ul>
 );
 

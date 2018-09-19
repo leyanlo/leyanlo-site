@@ -13,7 +13,7 @@ const Navbar = () => (
       Home
     </Link>
     <Link
-      to="/software"
+      to="/software/"
       getProps={({ isPartiallyCurrent }) =>
         isPartiallyCurrent ? { className: 'navbar__item -active' } : { className: 'navbar__item' }
       }
@@ -22,7 +22,7 @@ const Navbar = () => (
       Software
     </Link>
     <Link
-      to="/violin"
+      to="/violin/"
       getProps={({ isPartiallyCurrent }) =>
         isPartiallyCurrent ? { className: 'navbar__item -active' } : { className: 'navbar__item' }
       }
@@ -31,7 +31,7 @@ const Navbar = () => (
       Violin
     </Link>
     <Link
-      to="/cubing"
+      to="/cubing/"
       getProps={({ isPartiallyCurrent }) =>
         isPartiallyCurrent ? { className: 'navbar__item -active' } : { className: 'navbar__item' }
       }
