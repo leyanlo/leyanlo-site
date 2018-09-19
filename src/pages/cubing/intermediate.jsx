@@ -69,7 +69,7 @@ const IntermediatePage = () => (
           {f2lCases.map(f2lCase => (
             <div className="algGrid__item" key={f2lCase.pattern}>
               <F2lPattern pattern={f2lCase.pattern} />
-              <b className="alg">{f2lCase.alg}</b>
+              <b className="algGrid__alg">{f2lCase.alg}</b>
             </div>
           ))}
         </div>
@@ -79,7 +79,7 @@ const IntermediatePage = () => (
           {ollEdgeCases.map(ollCase => (
             <div className="algGrid__item" key={ollCase.pattern}>
               <OllPattern pattern={ollCase.pattern} />
-              <b className="alg">{ollCase.alg}</b>
+              <b className="algGrid__alg">{ollCase.alg}</b>
             </div>
           ))}
         </div>
@@ -89,7 +89,7 @@ const IntermediatePage = () => (
           {ollCornerCases.map(ollCase => (
             <div className="algGrid__item" key={ollCase.pattern}>
               <OllPattern pattern={ollCase.pattern} />
-              <b className="alg">{ollCase.alg}</b>
+              <b className="algGrid__alg">{ollCase.alg}</b>
             </div>
           ))}
         </div>
@@ -99,7 +99,7 @@ const IntermediatePage = () => (
           {pllCornerCases.map(pllCase => (
             <div className="algGrid__item" key={pllCase.pattern}>
               <PllPattern pattern={pllCase.pattern} />
-              <b className="alg">{pllCase.alg}</b>
+              <b className="algGrid__alg">{pllCase.alg}</b>
             </div>
           ))}
         </div>
@@ -109,7 +109,7 @@ const IntermediatePage = () => (
           {pllEdgeCases.map(pllCase => (
             <div className="algGrid__item" key={pllCase.pattern}>
               <PllPattern pattern={pllCase.pattern} />
-              <b className="alg">{pllCase.alg}</b>
+              <b className="algGrid__alg">{pllCase.alg}</b>
             </div>
           ))}
         </div>
