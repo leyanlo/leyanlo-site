@@ -26,7 +26,7 @@ const OllPattern = ({ pattern }) => {
             y={y + 3}
             width="6"
             height={tileSize - 6}
-            className="ollTileSide"
+            className="ollTile -side"
             key={`${pattern}-${i}-side`}
           />
         );
@@ -38,7 +38,7 @@ const OllPattern = ({ pattern }) => {
             y={y - 11}
             width={tileSize - 6}
             height="6"
-            className="ollTileSide"
+            className="ollTile -side"
             key={`${pattern}-${i}-side`}
           />
         );
@@ -50,7 +50,7 @@ const OllPattern = ({ pattern }) => {
             y={y + 3}
             width="6"
             height={tileSize - 6}
-            className="ollTileSide"
+            className="ollTile -side"
             key={`${pattern}-${i}-side`}
           />
         );
@@ -62,7 +62,7 @@ const OllPattern = ({ pattern }) => {
             y={y + tileSize + 5}
             width={tileSize - 6}
             height="6"
-            className="ollTileSide"
+            className="ollTile -side"
             key={`${pattern}-${i}-side`}
           />
         );

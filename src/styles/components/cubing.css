@@ -27,12 +27,22 @@
   flex-basis: 36px;
 }
 
+.algGrid__id.-coll {
+  flex-basis: 24px;
+}
+
+.algGrid__algs {
+  margin-left: 8px;
+  font-size: var(--fontLarge);
+}
+
 .algPattern {
   flex-shrink: 0;
   width: 100px;
   height: 100px;
 }
 
+/* F2L */
 .f2lTile {
   fill: lightgray;
   stroke: black;
@@ -52,34 +62,27 @@
   fill: blue;
 }
 
-.f2lTile.-O {
-  fill: orange;
-}
-
-.f2lTile.-G {
-  fill: green;
-}
-
 .f2lTile.-Y {
   fill: yellow;
 }
 
+/* OLL */
 .ollTile {
   fill: lightgray;
   stroke: black;
   stroke-width: 4px;
 }
 
-.ollTile.-F {
+.ollTile.-F,
+.ollTile.-side {
   fill: yellow;
 }
 
-.ollTileSide {
-  fill: yellow;
-  stroke: black;
+.ollTile.-side {
   stroke-width: 2px;
 }
 
+/* PLL */
 .pllTile {
   fill: yellow;
   stroke: black;
@@ -91,7 +94,37 @@
   stroke-width: 2px;
 }
 
-.algGrid__algs {
-  margin-left: 8px;
-  font-size: var(--fontLarge);
+/* COLL */
+.collTile {
+  fill: lightgray;
+  stroke: black;
+  stroke-width: 4px;
+}
+
+.collTile.-W {
+  fill: white;
+}
+
+.collTile.-R {
+  fill: red;
+}
+
+.collTile.-B {
+  fill: #00abff;
+}
+
+.collTile.-O {
+  fill: orange;
+}
+
+.collTile.-G {
+  fill: lawngreen;
+}
+
+.collTile.-Y {
+  fill: yellow;
+}
+
+.collTile.-side {
+  stroke-width: 2px;
 }
