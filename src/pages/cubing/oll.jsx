@@ -141,9 +141,9 @@ const ollCases = [
   { id: 33, pattern: 'UUFFFFDDF', alg: "R' U' R U R B' R' B", comments: ['Inverse of OLL 37'] },
   { id: 34, pattern: 'LURFFFFDF', alg: "R U R' U' B' R' F R S", comments: [] },
   { id: 35, pattern: 'UFFLFFFDR', alg: "R' U2 R2 B' R' B R' U2 R", comments: ['Similar to OLL 55'] },
-  { id: 36, pattern: 'FURFFRDFF', alg: "R' U' R U' R' U R U R B' R' B", comments: ['Mirror of 38'] },
+  { id: 36, pattern: 'FURFFRDFF', alg: "R' U' R U' R' U R U R B' R' B", comments: ['Mirror of OLL 38'] },
   { id: 37, pattern: 'FFRFFRDDF', alg: "F R U' R' U' R U R' F'", comments: ['Inverse of OLL 33'] },
-  { id: 38, pattern: 'LUFLFFFFD', alg: "L U L' U L U' L' U' L' B L B'", comments: ['Mirror of 36'] },
+  { id: 38, pattern: 'LUFLFFFFD', alg: "L U L' U L U' L' U' L' B L B'", comments: ['Mirror of OLL 36'] },
   {
     id: 39,
     pattern: 'UUFFFFFDR',
