@@ -15,6 +15,10 @@
   margin-bottom: 8px;
 }
 
+.algGrid__item.-bld {
+  align-items: normal;
+}
+
 .algGrid__id {
   flex-shrink: 0;
   flex-basis: 18px;
@@ -31,9 +35,20 @@
   flex-basis: 24px;
 }
 
+.algGrid__id.-bld {
+  flex-basis: 72px;
+}
+
 .algGrid__algs {
-  margin-left: 8px;
+  margin: 0 0 0 8px;
+  padding: 0;
   font-size: var(--fontLarge);
+  list-style: none;
+}
+
+.algGrid__algs.-bld {
+  padding-left: 20px;
+  list-style: disc;
 }
 
 .algPattern {
