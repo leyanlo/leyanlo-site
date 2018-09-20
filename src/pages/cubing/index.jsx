@@ -31,13 +31,13 @@ const CubingPage = () => (
           </li>
           <li className="li">
             1/23/06:{' '}
-            <a href="/media/2006-01-23-leyan-lo-imposter-on-letterman.mpg" target="_blank" rel="noopener noreferrer">
+            <a href="/video/2006-01-23-leyan-lo-imposter-on-letterman.mpg" target="_blank" rel="noopener noreferrer">
               Late Show with David Letterman
             </a>
           </li>
           <li className="li">
             1/24/06:{' '}
-            <a href="/media/2006-01-24-tonight-show-leyan-tyson.m4v" target="_blank" rel="noopener noreferrer">
+            <a href="/video/2006-01-24-tonight-show-leyan-tyson.m4v" target="_blank" rel="noopener noreferrer">
               The Tonight Show with Jay Leno
             </a>
           </li>
@@ -49,25 +49,25 @@ const CubingPage = () => (
           </li>
           <li className="li">
             5/10/06:{' '}
-            <a href="/media/2006-05-10-jeopardy.mpg" target="_blank" rel="noopener noreferrer">
+            <a href="/video/2006-05-10-jeopardy.mpg" target="_blank" rel="noopener noreferrer">
               Jeopardy question
             </a>
           </li>
           <li className="li">
             11/28/06:{' '}
-            <a href="/media/2006-11-28-zefrank.m4v" target="_blank" rel="noopener noreferrer">
+            <a href="/video/2006-11-28-zefrank.m4v" target="_blank" rel="noopener noreferrer">
               the show with zefrank
             </a>
           </li>
           <li className="li">
             9/28/07:{' '}
-            <a href="/media/2007-09-28-cnn-american-morning.mp4" target="_blank" rel="noopener noreferrer">
+            <a href="/video/2007-09-28-cnn-american-morning.mp4" target="_blank" rel="noopener noreferrer">
               CNN American Morning
             </a>
           </li>
           <li className="li">
             1/16/09:{' '}
-            <a href="/media/2009-01-16-abc-7.mp4" target="_blank" rel="noopener noreferrer">
+            <a href="/video/2009-01-16-abc-7.mp4" target="_blank" rel="noopener noreferrer">
               ABC News
             </a>
           </li>
