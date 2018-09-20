@@ -13,6 +13,8 @@ const Layout = ({ children, tabs }) => (
         site {
           siteMetadata {
             title
+            description
+            keywords
           }
         }
       }
@@ -22,14 +24,17 @@ const Layout = ({ children, tabs }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Leyan Lo’s personal website' },
-            { name: 'keywords', content: 'software, violin, cubing' }
+            { name: 'description', content: data.site.siteMetadata.description },
+            { name: 'keywords', content: data.site.siteMetadata.keywords },
+            { property: 'og:url', content: 'https://angry-kowalevski-0ee72d.netlify.com/' },
+            { property: 'og:title', content: data.site.siteMetadata.title },
+            { property: 'og:image', content: 'https://angry-kowalevski-0ee72d.netlify.com/img/logo-fb.png' }
           ]}
           link={[
             {
               rel: 'apple-touch-icon',
               sizes: '180x180',
-              href: '/apple-touch-icon.png'
+              href: '/img/apple-touch-icon.png'
             }
           ]}
         >

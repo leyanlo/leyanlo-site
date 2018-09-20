@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Leyan Lo`
+    title: `Leyan Lo`,
+    description: `Leyan Lo’s personal website`,
+    keywords: `software, violin, cubing`
   },
   plugins: [
     `gatsby-plugin-offline`,
