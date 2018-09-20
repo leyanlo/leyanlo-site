@@ -26,9 +26,15 @@ const Layout = ({ children, tabs }) => (
           meta={[
             { name: 'description', content: data.site.siteMetadata.description },
             { name: 'keywords', content: data.site.siteMetadata.keywords },
-            { property: 'og:url', content: 'https://angry-kowalevski-0ee72d.netlify.com/' },
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:site', content: '@leyanlo' },
             { property: 'og:title', content: data.site.siteMetadata.title },
-            { property: 'og:image', content: 'https://angry-kowalevski-0ee72d.netlify.com/img/logo-fb.png' }
+            { property: 'og:description', content: data.site.siteMetadata.description },
+            { property: 'og:image', content: 'https://angry-kowalevski-0ee72d.netlify.com/img/logo-fb.png' },
+            { property: 'og:url', content: 'https://angry-kowalevski-0ee72d.netlify.com/' },
+            { property: 'twitter:title', content: data.site.siteMetadata.title },
+            { property: 'twitter:description', content: data.site.siteMetadata.description },
+            { property: 'twitter:image', content: 'https://angry-kowalevski-0ee72d.netlify.com/img/logo-fb.png' }
           ]}
           link={[
             {
