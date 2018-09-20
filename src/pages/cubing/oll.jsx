@@ -3,8 +3,8 @@ import reactStringReplace from 'react-string-replace-recursively';
 
 import Layout from '../../components/layout';
 import OllPattern from '../../components/cubing/oll-pattern';
-import cubingTabs from './cubing-tabs.json';
-import ollCases from './oll-cases.json';
+import cubingTabs from '../../json/cubing/cubing-tabs.json';
+import ollCases from '../../json/cubing/oll-cases.json';
 
 const commentReplaceConfig = {
   oll: {

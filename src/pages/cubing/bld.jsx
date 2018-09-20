@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Layout from '../../components/layout';
-import bldCases from './bld-cases.json';
-import cubingTabs from './cubing-tabs.json';
+import bldCases from '../../json/cubing/bld-cases.json';
+import cubingTabs from '../../json/cubing/cubing-tabs.json';
 
 const BldPage = () => (
   <Layout tabs={cubingTabs}>

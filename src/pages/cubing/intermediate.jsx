@@ -4,8 +4,8 @@ import F2lPattern from '../../components/cubing/f2l-pattern';
 import Layout from '../../components/layout';
 import OllPattern from '../../components/cubing/oll-pattern';
 import PllPattern from '../../components/cubing/pll-pattern';
-import cubingTabs from './cubing-tabs.json';
-import intermediateCases from './intermediate-cases.json';
+import cubingTabs from '../../json/cubing/cubing-tabs.json';
+import intermediateCases from '../../json/cubing/intermediate-cases.json';
 
 const IntermediatePage = () => (
   <Layout tabs={cubingTabs}>
