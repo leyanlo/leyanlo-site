@@ -40,26 +40,48 @@ const CollPattern = ({ pattern }) => {
         corner = { color: 'Y' };
     }
     const tileClassName = `collTile -${corner.color}`;
-    svgEls.push(
-      <rect x={x} y={y} width={tileSize} height={tileSize} className={tileClassName} key={`${pattern}-${i}`} />
-    );
+    svgEls.push(<rect x={x} y={y} width={tileSize} height={tileSize} className={tileClassName} key={`${i}`} />);
 
     // Draw label
     if (corner.label) {
       if (corner.label.length === 1) {
         svgEls.push(
-          <text x={x + tileSize / 2} y={y + tileSize / 2} dy={12} fontSize={36} fontWeight={600} textAnchor="middle">
+          <text
+            x={x + tileSize / 2}
+            y={y + tileSize / 2}
+            dy={12}
+            fontSize={36}
+            fontWeight={600}
+            textAnchor="middle"
+            key={`${i}-label`}
+          >
             {corner.label}
           </text>
         );
       } else if (corner.label.length === 2) {
         svgEls.push(
-          <text x={x + tileSize / 4} y={y + (tileSize * 3) / 4} dx={1} dy={3} fontSize={24} textAnchor="middle">
+          <text
+            x={x + tileSize / 4}
+            y={y + (tileSize * 3) / 4}
+            dx={1}
+            dy={3}
+            fontSize={24}
+            textAnchor="middle"
+            key={`${i}-label-bottomLeft`}
+          >
             {corner.label.charAt(0)}
           </text>
         );
         svgEls.push(
-          <text x={x + (tileSize * 3) / 4} y={y + tileSize / 4} dx={-2} dy={12} fontSize={24} textAnchor="middle">
+          <text
+            x={x + (tileSize * 3) / 4}
+            y={y + tileSize / 4}
+            dx={-2}
+            dy={12}
+            fontSize={24}
+            textAnchor="middle"
+            key={`${i}-label-topRight`}
+          >
             {corner.label.charAt(1)}
           </text>
         );
@@ -75,7 +97,7 @@ const CollPattern = ({ pattern }) => {
           width={6}
           height={tileSize - 6}
           className={`collTile -side -${corner.leftColor}`}
-          key={`${pattern}-${i}-side`}
+          key={`${i}-left`}
         />
       );
     }
@@ -88,7 +110,7 @@ const CollPattern = ({ pattern }) => {
           width={tileSize - 6}
           height={6}
           className={`collTile -side -${corner.topColor}`}
-          key={`${pattern}-${i}-side`}
+          key={`${i}-top`}
         />
       );
     }
@@ -101,7 +123,7 @@ const CollPattern = ({ pattern }) => {
           width={6}
           height={tileSize - 6}
           className={`collTile -side -${corner.rightColor}`}
-          key={`${pattern}-${i}-side`}
+          key={`${i}-right`}
         />
       );
     }
@@ -114,7 +136,7 @@ const CollPattern = ({ pattern }) => {
           width={tileSize - 6}
           height={6}
           className={`collTile -side -${corner.bottomColor}`}
-          key={`${pattern}-${i}-side`}
+          key={`${i}-bottom`}
         />
       );
     }

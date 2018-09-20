@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import reactStringReplace from 'react-string-replace';
+import reactStringReplace from 'react-string-replace-recursively';
 
 import CollPattern from '../../components/cubing/coll-pattern';
 import Layout from '../../components/layout';
@@ -339,6 +339,33 @@ const collCases = [
   }
 ];
 
+const commentReplaceConfig = {
+  f2l: {
+    pattern: /(F2L \d+)/g,
+    matcherFn: (rawText, processed, key) => (
+      <Link to={`/cubing/f2l/#${rawText.replace(/^F2L /, '')}`} key={key}>
+        {processed}
+      </Link>
+    )
+  },
+  oll: {
+    pattern: /(OLL \d+)/g,
+    matcherFn: (rawText, processed, key) => (
+      <Link to={`/cubing/oll/#${rawText.replace(/^OLL /, '')}`} key={key}>
+        {processed}
+      </Link>
+    )
+  },
+  coll: {
+    pattern: /(COLL \D+\d)/g,
+    matcherFn: (rawText, processed, key) => (
+      <a href={`#${rawText.replace(/^COLL /, '')}`} key={key}>
+        {processed}
+      </a>
+    )
+  }
+};
+
 const CollPage = () => (
   <Layout tabs={cubingTabs}>
     <div className="container -main">
@@ -355,30 +382,12 @@ const CollPage = () => (
                 <b>{collCase.alg}</b>
                 <br />
                 <small className="algGrid__comments">
-                  {collCase.comments.map((comment, i) => {
-                    let linkedComments = comment;
-                    linkedComments = reactStringReplace(linkedComments, /(F2L \d+)/g, (match, j) => (
-                      <Link to={`/cubing/f2l/#${match.replace(/^F2L /, '')}`} key={`${collCase.id}-${i}-${j}`}>
-                        {match}
-                      </Link>
-                    ));
-                    linkedComments = reactStringReplace(linkedComments, /(OLL \d+)/g, (match, j) => (
-                      <Link to={`/cubing/oll/#${match.replace(/^OLL /, '')}`} key={`${collCase.id}-${i}-${j}`}>
-                        {match}
-                      </Link>
-                    ));
-                    linkedComments = reactStringReplace(linkedComments, /(COLL \D+\d)/g, (match, j) => (
-                      <a href={`#${match.replace(/^COLL /, '')}`} key={`${collCase.id}-${i}-${j}`}>
-                        {match}
-                      </a>
-                    ));
-                    return (
-                      <span key={`${collCase.id}-${i}`}>
-                        {linkedComments}
-                        <br />
-                      </span>
-                    );
-                  })}
+                  {collCase.comments.map((comment, i) => (
+                    <span key={`${collCase.id}-${i}`}>
+                      {reactStringReplace(commentReplaceConfig)(comment)}
+                      <br />
+                    </span>
+                  ))}
                 </small>
               </div>
             </div>

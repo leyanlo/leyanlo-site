@@ -1,5 +1,5 @@
 import React from 'react';
-import reactStringReplace from 'react-string-replace';
+import reactStringReplace from 'react-string-replace-recursively';
 
 import Layout from '../../components/layout';
 import OllPattern from '../../components/cubing/oll-pattern';
@@ -225,6 +225,17 @@ const ollCases = [
   { id: 57, pattern: 'FUFFFFFDF', alg: "R U R' U' L R' F R F' L'", comments: [] }
 ];
 
+const commentReplaceConfig = {
+  oll: {
+    pattern: /(OLL \d+)/g,
+    matcherFn: (rawText, processed, key) => (
+      <a href={`#${rawText.replace(/^OLL /, '')}`} key={key}>
+        {processed}
+      </a>
+    )
+  }
+};
+
 const OllPage = () => (
   <Layout tabs={cubingTabs}>
     <div className="container -main">
@@ -243,11 +254,7 @@ const OllPage = () => (
                 <small className="algGrid__comments">
                   {ollCase.comments.map((comment, i) => (
                     <span key={`${ollCase.id}-${i}`}>
-                      {reactStringReplace(comment, /(OLL \d+)/g, (match, j) => (
-                        <a href={`#${match.replace(/^OLL /, '')}`} key={`${ollCase.id}-${i}-${j}`}>
-                          {match}
-                        </a>
-                      ))}
+                      {reactStringReplace(commentReplaceConfig)(comment)}
                       <br />
                     </span>
                   ))}
