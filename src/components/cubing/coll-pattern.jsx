@@ -49,6 +49,7 @@ const CollPattern = ({ pattern }) => {
           <text
             x={x + tileSize / 2}
             y={y + tileSize / 2}
+            dx={-1}
             dy={12}
             fontSize={36}
             fontWeight={600}
@@ -63,8 +64,7 @@ const CollPattern = ({ pattern }) => {
           <text
             x={x + tileSize / 4}
             y={y + (tileSize * 3) / 4}
-            dx={1}
-            dy={3}
+            dy={5}
             fontSize={24}
             textAnchor="middle"
             key={`${i}-label-bottomLeft`}
@@ -76,8 +76,7 @@ const CollPattern = ({ pattern }) => {
           <text
             x={x + (tileSize * 3) / 4}
             y={y + tileSize / 4}
-            dx={-2}
-            dy={12}
+            dy={10}
             fontSize={24}
             textAnchor="middle"
             key={`${i}-label-topRight`}
