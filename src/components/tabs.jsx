@@ -14,18 +14,21 @@ function onClick(e) {
 const Tabs = ({ tabs }) => (
   <Location>
     {({ location }) => {
-      setTimeout(() => {
-        // Hack until this is resolved: https://github.com/gatsbyjs/gatsby/issues/5773
-        let scrollLeft;
-        if (location.state && location.state.tabsScrollLeft) {
-          scrollLeft = location.state && location.state.tabsScrollLeft;
-        } else if (document.querySelector('.tabs__link.-active')) {
-          scrollLeft = document.querySelector('.tabs__link.-active').offsetLeft;
-        } else {
-          scrollLeft = 0;
-        }
-        document.querySelector('.tabs').scrollLeft = scrollLeft;
-      });
+      // document is not defined during build
+      if (typeof document !== 'undefined') {
+        setTimeout(() => {
+          // Hack until this is resolved: https://github.com/gatsbyjs/gatsby/issues/5773
+          let scrollLeft;
+          if (location.state && location.state.tabsScrollLeft) {
+            scrollLeft = location.state && location.state.tabsScrollLeft;
+          } else if (document.querySelector('.tabs__link.-active')) {
+            scrollLeft = document.querySelector('.tabs__link.-active').offsetLeft;
+          } else {
+            scrollLeft = 0;
+          }
+          document.querySelector('.tabs').scrollLeft = scrollLeft;
+        });
+      }
 
       return (
         <ul className="tabs">
