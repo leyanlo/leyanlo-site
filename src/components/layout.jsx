@@ -32,6 +32,7 @@ const Layout = ({ children, tabs }) => (
             { property: 'og:description', content: data.site.siteMetadata.description },
             { property: 'og:image', content: 'https://angry-kowalevski-0ee72d.netlify.com/img/logo-fb.png' },
             { property: 'og:url', content: 'https://angry-kowalevski-0ee72d.netlify.com/' },
+            { property: 'og:site_name', content: data.site.siteMetadata.title },
             { property: 'twitter:title', content: data.site.siteMetadata.title },
             { property: 'twitter:description', content: data.site.siteMetadata.description },
             { property: 'twitter:image', content: 'https://angry-kowalevski-0ee72d.netlify.com/img/logo-fb.png' }
