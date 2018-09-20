@@ -1,5 +1,5 @@
 [
-  { "to": "/cubing/", "title": "Links", "isBase": true },
+  { "to": "/cubing/", "title": "Links" },
   { "to": "/cubing/beginner/", "title": "Beginner solution" },
   { "to": "/cubing/intermediate/", "title": "Intermediate algs" },
   { "to": "/cubing/f2l/", "title": "F2L" },

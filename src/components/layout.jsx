@@ -62,8 +62,7 @@ Layout.propTypes = {
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
       to: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      isBase: PropTypes.bool
+      title: PropTypes.string.isRequired
     }).isRequired
   )
 };
