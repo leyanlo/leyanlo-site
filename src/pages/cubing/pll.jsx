@@ -19,15 +19,13 @@ const PllPage = () => (
               <PllPattern pattern={pllCase.pattern} />
               <div className="algGrid__algs">
                 <b>{pllCase.alg}</b>
-                <br />
-                <small className="algGrid__comments">
+                <ul className="algGrid__comments">
                   {pllCase.comments.map((comment, i) => (
-                    <span key={`${pllCase.id}-${i}`}>
-                      {comment}
-                      <br />
-                    </span>
+                    <li key={`${pllCase.id}-${i}`}>
+                      <small>{comment} </small>
+                    </li>
                   ))}
-                </small>
+                </ul>
               </div>
             </div>
           ))}

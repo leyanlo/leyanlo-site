@@ -16,7 +16,7 @@ const Tabs = ({ tabs }) => (
           };
         }
         return (
-          <li className="tabs__item" key={tab.to}>
+          <li key={tab.to}>
             <Link to={tab.to} {...linkProps}>
               {tab.title}
             </Link>

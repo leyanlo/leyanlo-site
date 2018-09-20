@@ -31,15 +31,13 @@ const OllPage = () => (
               <OllPattern pattern={ollCase.pattern} />
               <div className="algGrid__algs">
                 <b>{ollCase.alg}</b>
-                <br />
-                <small className="algGrid__comments">
+                <ul className="algGrid__comments">
                   {ollCase.comments.map((comment, i) => (
-                    <span key={`${ollCase.id}-${i}`}>
-                      {reactStringReplace(commentReplaceConfig)(comment)}
-                      <br />
-                    </span>
+                    <li key={`${ollCase.id}-${i}`}>
+                      <small>{reactStringReplace(commentReplaceConfig)(comment)}</small>
+                    </li>
                   ))}
-                </small>
+                </ul>
               </div>
             </div>
           ))}

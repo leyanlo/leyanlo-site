@@ -48,15 +48,13 @@ const CollPage = () => (
               <CollPattern pattern={collCase.pattern} />
               <div className="algGrid__algs">
                 <b>{collCase.alg}</b>
-                <br />
-                <small className="algGrid__comments">
+                <ul className="algGrid__comments">
                   {collCase.comments.map((comment, i) => (
-                    <span key={`${collCase.id}-${i}`}>
-                      {reactStringReplace(commentReplaceConfig)(comment)}
-                      <br />
-                    </span>
+                    <li key={`${collCase.id}-${i}`}>
+                      <small>{reactStringReplace(commentReplaceConfig)(comment)}</small>
+                    </li>
                   ))}
-                </small>
+                </ul>
               </div>
             </div>
           ))}

@@ -25,7 +25,7 @@ const BldPage = () => (
                   <span className="algGrid__id -bld">{bldCase.id}</span>
                   <ul className="algGrid__algs -bld">
                     {bldCase.algs.map((alg, i) => (
-                      <li key={`${bldCase.id}-${i}`}>
+                      <li className="li" key={`${bldCase.id}-${i}`}>
                         <b>{alg}</b>
                       </li>
                     ))}

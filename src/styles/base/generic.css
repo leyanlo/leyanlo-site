@@ -122,11 +122,11 @@ a > * {
   vertical-align: text-bottom;
 }
 
-ul {
+.ul {
   padding-left: 20px;
 }
 
-li {
+.li {
   padding-bottom: 0.25em;
 }
 
@@ -148,7 +148,7 @@ li {
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
-  ul {
+  .ul {
     padding-left: 40px;
   }
 }
