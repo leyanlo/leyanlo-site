@@ -4,8 +4,8 @@ import reactStringReplace from 'react-string-replace-recursively';
 
 import CollPattern from '../../components/cubing/coll-pattern';
 import Layout from '../../components/layout';
-import collCases from '../../json/cubing/coll-cases.json';
-import cubingTabs from '../../json/cubing/cubing-tabs.json';
+import collCases from '../../data/cubing/coll-cases.json';
+import cubingTabs from '../../data/cubing/cubing-tabs.json';
 
 const commentReplaceConfig = {
   f2l: {
