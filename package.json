@@ -12,7 +12,6 @@
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.5",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-sharp": "^2.1.1",
     "normalize.css": "^8.0.0",
@@ -20,7 +19,9 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
-    "react-string-replace-recursively": "^0.1.27"
+    "react-string-replace-recursively": "^0.1.27",
+    "typeface-source-sans-pro": "0.0.54",
+    "typeface-source-serif-pro": "0.0.54"
   },
   "keywords": [
     "gatsby"
