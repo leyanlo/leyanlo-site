@@ -30,17 +30,9 @@ body {
   --zNavbar: 1;
 
   color: var(--darkGray);
-  font-family: 'Trebuchet MS', sans-serif;
-  line-height: 1.25;
-  letter-spacing: -0.03125em;
-  word-spacing: -0.03125em;
-  background-color: var(--bodyBackground);
-}
-
-html.wf-sourcesanspro-n4-active > body {
   font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 0;
-  word-spacing: 0;
+  line-height: 1.25;
+  background-color: var(--bodyBackground);
 }
 
 /* Browsers which partially support CSS Environment variables (iOS 11.0-11.2) */
@@ -85,18 +77,7 @@ h5,
 h6 {
   margin-top: 0;
   color: black;
-  font-family: Palatino, serif;
-  letter-spacing: 0.01875em;
-}
-
-html.wf-sourceserifpro-n6-active h1,
-html.wf-sourceserifpro-n6-active h2,
-html.wf-sourceserifpro-n6-active h3,
-html.wf-sourceserifpro-n6-active h4,
-html.wf-sourceserifpro-n6-active h5,
-html.wf-sourceserifpro-n6-active h6 {
   font-family: 'Source Serif Pro', serif;
-  letter-spacing: 0;
 }
 
 p {
