@@ -1,30 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: `Leyan Lo`,
-    description: `Leyan Lo’s personal website`,
-    keywords: `software, violin, cubing`
+    title: 'Leyan Lo',
+    description: 'Leyan Lo’s personal website',
+    keywords: 'software, violin, cubing'
   },
   plugins: [
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        fonts: [`Source Sans Pro:400,600`, `Source Serif Pro:600`]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Leyan Lo`,
-        short_name: `Leyan Lo`,
-        start_url: `/`,
-        background_color: `#E3E4E8`,
-        theme_color: `#001F7F`,
-        display: `minimal-ui`,
-        icon: `src/images/logo.png`
+        name: 'Leyan Lo',
+        short_name: 'Leyan Lo',
+        start_url: '/',
+        background_color: '#E3E4E8',
+        theme_color: '#001F7F',
+        display: 'minimal-ui',
+        icon: 'src/images/logo.png'
       }
     },
     {
@@ -34,9 +28,17 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        name: `images`,
+        google: {
+          families: ['Source Sans Pro:400,600', 'Source Serif Pro:600']
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
         path: `${__dirname}/src/images/`
       }
     }
