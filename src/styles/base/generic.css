@@ -37,7 +37,7 @@ body {
   background-color: var(--bodyBackground);
 }
 
-body.SourceSansPro {
+html.wf-sourcesanspro-n4-active > body {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0;
   word-spacing: 0;
@@ -89,12 +89,12 @@ h6 {
   letter-spacing: 0.01875em;
 }
 
-.SourceSerifPro h1,
-.SourceSerifPro h2,
-.SourceSerifPro h3,
-.SourceSerifPro h4,
-.SourceSerifPro h5,
-.SourceSerifPro h6 {
+html.wf-sourceserifpro-n6-active h1,
+html.wf-sourceserifpro-n6-active h2,
+html.wf-sourceserifpro-n6-active h3,
+html.wf-sourceserifpro-n6-active h4,
+html.wf-sourceserifpro-n6-active h5,
+html.wf-sourceserifpro-n6-active h6 {
   font-family: 'Source Serif Pro', serif;
   letter-spacing: 0;
 }
