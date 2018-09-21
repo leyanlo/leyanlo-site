@@ -30,12 +30,12 @@ const Layout = ({ children, tabs }) => (
             { name: 'twitter:site', content: '@leyanlo' },
             { property: 'og:title', content: data.site.siteMetadata.title },
             { property: 'og:description', content: data.site.siteMetadata.description },
-            { property: 'og:image', content: 'https://leyanlo.com/img/logo-fb.png' },
-            { property: 'og:url', content: 'https://leyanlo.com/' },
+            { property: 'og:image', content: 'https://www.leyanlo.com/img/logo-fb.png' },
+            { property: 'og:url', content: 'https://www.leyanlo.com/' },
             { property: 'og:site_name', content: data.site.siteMetadata.title },
             { property: 'twitter:title', content: data.site.siteMetadata.title },
             { property: 'twitter:description', content: data.site.siteMetadata.description },
-            { property: 'twitter:image', content: 'https://leyanlo.com/img/logo-fb.png' }
+            { property: 'twitter:image', content: 'https://www.leyanlo.com/img/logo-fb.png' }
           ]}
           link={[
             {
