@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import PllPattern from '../../components/cubing/pll-pattern';
 import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
-import pllCases from '../../data/cubing/pll-cases.json';
+import pllCases from '../../data/cubing/pll-cases.yaml';
 
 const PllPage = () => (
   <Layout tabs={cubingTabs}>
