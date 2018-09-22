@@ -2,7 +2,7 @@ import React from 'react';
 
 import F2lPattern from '../../components/cubing/f2l-pattern';
 import Layout from '../../components/layout';
-import cubingTabs from '../../data/cubing/cubing-tabs.json';
+import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
 import f2lCases from '../../data/cubing/f2l-cases.json';
 
 const F2LPage = () => (
