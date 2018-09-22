@@ -5,7 +5,7 @@ import Layout from '../../components/layout';
 import OllPattern from '../../components/cubing/oll-pattern';
 import PllPattern from '../../components/cubing/pll-pattern';
 import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
-import intermediateCases from '../../data/cubing/intermediate-cases.json';
+import intermediateCases from '../../data/cubing/intermediate-cases.yaml';
 
 const IntermediatePage = () => (
   <Layout tabs={cubingTabs}>
