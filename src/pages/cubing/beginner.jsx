@@ -2,7 +2,7 @@ import React from 'react';
 
 import FileIcon from '../../images/icon-file.svg';
 import Layout from '../../components/layout';
-import cubingTabs from '../../data/cubing/cubing-tabs.json';
+import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
 
 const BeginnerPage = () => (
   <Layout tabs={cubingTabs}>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from '../../components/layout';
-import cubingTabs from '../../data/cubing/cubing-tabs.json';
+import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
 
 const CubingPage = () => (
   <Layout tabs={cubingTabs}>
