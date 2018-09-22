@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from '../../components/layout';
-import bldCases from '../../data/cubing/bld-cases.json';
+import bldCases from '../../data/cubing/bld-cases.yaml';
 import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
 
 const BldPage = () => (
