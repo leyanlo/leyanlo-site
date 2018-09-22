@@ -4,7 +4,7 @@ import reactStringReplace from 'react-string-replace-recursively';
 import Layout from '../../components/layout';
 import OllPattern from '../../components/cubing/oll-pattern';
 import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
-import ollCases from '../../data/cubing/oll-cases.json';
+import ollCases from '../../data/cubing/oll-cases.yaml';
 
 const commentReplaceConfig = {
   oll: {
