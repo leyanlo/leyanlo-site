@@ -61,7 +61,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/leyanlo/leyanlo-site"
+    "url": "https://github.com/leyanlo/leyanlo-site"
   },
   "husky": {
     "hooks": {
