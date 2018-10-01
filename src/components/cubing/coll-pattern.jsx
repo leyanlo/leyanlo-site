@@ -150,7 +150,7 @@ const CollPattern = ({ pattern }) => {
 CollPattern.propTypes = {
   pattern: PropTypes.arrayOf(
     PropTypes.shape({
-      label: PropTypes.string.isRequired,
+      label: PropTypes.string,
       color: PropTypes.string.isRequired,
       topColor: PropTypes.string,
       rightColor: PropTypes.string,
