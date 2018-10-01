@@ -1,3 +1,4 @@
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 import reactStringReplace from 'react-string-replace-recursively';
 
@@ -10,9 +11,9 @@ const commentReplaceConfig = {
   oll: {
     pattern: /(OLL \d+)/g,
     matcherFn: (rawText, processed, key) => (
-      <a href={`#${rawText.replace(/^OLL /, '')}`} key={key}>
+      <OutboundLink href={`#${rawText.replace(/^OLL /, '')}`} key={key}>
         {processed}
-      </a>
+      </OutboundLink>
     )
   }
 };
@@ -25,9 +26,9 @@ const OllPage = () => (
         <div className="algGrid">
           {ollCases.map(ollCase => (
             <div className="algGrid__item" key={ollCase.id}>
-              <a href={`#${ollCase.id}`} name={ollCase.id} className="algGrid__id">
+              <OutboundLink href={`#${ollCase.id}`} name={ollCase.id} className="algGrid__id">
                 {ollCase.id}
-              </a>
+              </OutboundLink>
               <OllPattern pattern={ollCase.pattern} />
               <div className="algGrid__algs">
                 <b>{ollCase.alg}</b>

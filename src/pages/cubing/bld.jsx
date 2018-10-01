@@ -1,3 +1,4 @@
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 
 import Layout from '../../components/layout';
@@ -11,9 +12,9 @@ const BldPage = () => (
         <h1>Blindfold cubing</h1>
         <p>
           For an in-depth tutorial on blindfold cubing, please see{' '}
-          <a href="http://cubefreak.net/bld/3op_guide.php" target="_blank" rel="noopener noreferrer">
+          <OutboundLink href="http://cubefreak.net/bld/3op_guide.php" target="_blank" rel="noopener noreferrer">
             Shotaro (Macky) Makisumi’s guide
-          </a>
+          </OutboundLink>
           . Below, I have compiled all the algorithms I use for blindfold cubing.
         </p>
         {bldCases.map(section => (

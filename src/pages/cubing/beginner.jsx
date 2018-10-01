@@ -1,3 +1,4 @@
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 
 import FileIcon from '../../images/icon-file.svg';
@@ -11,10 +12,10 @@ const BeginnerPage = () => (
         <h1>Beginner solution</h1>
         <p>I wrote a four page PDF detailing a layer by layer solution of the Rubik’s cube.</p>
         <p>
-          <a href="/docs/cube-solution.pdf">
+          <OutboundLink href="/docs/cube-solution.pdf">
             <FileIcon className="linkIcon" />
             Download my beginner solution
-          </a>
+          </OutboundLink>
         </p>
         <p>
           <small>Last updated September 14, 2008.</small>

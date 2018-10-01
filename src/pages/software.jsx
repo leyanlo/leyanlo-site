@@ -1,3 +1,4 @@
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 
 import FileIcon from '../images/icon-file.svg';
@@ -17,10 +18,10 @@ const SoftwarePage = () => (
           <li className="li">Building a prettier git log</li>
         </ul>
         <p>
-          <a href="/docs/leyan-lo-resume-2018-03-21.pdf">
+          <OutboundLink href="/docs/leyan-lo-resume-2018-03-21.pdf">
             <FileIcon className="linkIcon" />
             Download my resume
-          </a>
+          </OutboundLink>
         </p>
       </article>
     </div>

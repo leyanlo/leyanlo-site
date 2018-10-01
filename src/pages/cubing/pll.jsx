@@ -1,3 +1,4 @@
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 
 import Layout from '../../components/layout';
@@ -13,9 +14,9 @@ const PllPage = () => (
         <div className="algGrid">
           {pllCases.map(pllCase => (
             <div className="algGrid__item" key={pllCase.pattern}>
-              <a href={`#${pllCase.id}`} name={pllCase.id} className="algGrid__id -pll">
+              <OutboundLink href={`#${pllCase.id}`} name={pllCase.id} className="algGrid__id -pll">
                 {pllCase.id}
-              </a>
+              </OutboundLink>
               <PllPattern pattern={pllCase.pattern} />
               <div className="algGrid__algs">
                 <b>{pllCase.alg}</b>

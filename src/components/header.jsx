@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -18,7 +19,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <Navbar />
       <div className="header__gap" />
-      <a
+      <OutboundLink
         href="https://twitter.com/leyanlo"
         title="Twitter"
         target="_blank"
@@ -26,8 +27,8 @@ const Header = ({ siteTitle }) => (
         className="header__iconWrapper"
       >
         <HeaderTwitterIcon className="header__icon" />
-      </a>
-      <a
+      </OutboundLink>
+      <OutboundLink
         href="https://github.com/leyanlo"
         title="GitHub"
         target="_blank"
@@ -35,8 +36,8 @@ const Header = ({ siteTitle }) => (
         className="header__iconWrapper"
       >
         <HeaderGithubIcon className="header__icon" />
-      </a>
-      <a
+      </OutboundLink>
+      <OutboundLink
         href="https://www.linkedin.com/in/leyanlo/"
         title="LinkedIn"
         target="_blank"
@@ -44,8 +45,8 @@ const Header = ({ siteTitle }) => (
         className="header__iconWrapper"
       >
         <HeaderLinkedinIcon className="header__icon" />
-      </a>
-      <a
+      </OutboundLink>
+      <OutboundLink
         href="mailto:leyanlo@gmail.com"
         title="Email"
         target="_blank"
@@ -53,7 +54,7 @@ const Header = ({ siteTitle }) => (
         className="header__iconWrapper"
       >
         <HeaderEmailIcon className="header__icon" />
-      </a>
+      </OutboundLink>
     </div>
   </header>
 );

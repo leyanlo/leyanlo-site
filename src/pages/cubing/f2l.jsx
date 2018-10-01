@@ -1,3 +1,4 @@
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 
 import F2lPattern from '../../components/cubing/f2l-pattern';
@@ -13,9 +14,9 @@ const F2LPage = () => (
         <div className="algGrid">
           {f2lCases.map(f2lCase => (
             <div className="algGrid__item" key={f2lCase.id}>
-              <a href={`#${f2lCase.id}`} name={f2lCase.id} className="algGrid__id">
+              <OutboundLink href={`#${f2lCase.id}`} name={f2lCase.id} className="algGrid__id">
                 {f2lCase.id}
-              </a>
+              </OutboundLink>
               <F2lPattern pattern={f2lCase.pattern} />
               <ul className="algGrid__algs">
                 {f2lCase.algs.map((alg, i) => (
