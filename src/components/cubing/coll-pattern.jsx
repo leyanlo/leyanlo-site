@@ -1,8 +1,30 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
+
+import { AlgPattern } from '../styled/cubing';
 
 const tileStart = 34;
 const tileSize = 44;
+
+const collColor = {
+  W: 'white',
+  R: 'red',
+  B: '#00abff',
+  O: 'orange',
+  G: 'lawngreen',
+  Y: 'yellow'
+};
+
+const CollTile = styled.rect`
+  fill: ${props => collColor[props.color] || `lightgray`};
+  stroke: black;
+  stroke-width: 4px;
+`;
+
+const CollSideTile = styled(CollTile)`
+  stroke-width: 2px;
+`;
 
 /**
  * @param {Object[]} pattern - E.g. [
@@ -39,14 +61,13 @@ const CollPattern = ({ pattern }) => {
       default:
         corner = { color: 'Y' };
     }
-    const tileClassName = `collTile -${corner.color}`;
     svgEls.push(
-      <rect
+      <CollTile
         x={x}
         y={y}
         width={tileSize}
         height={tileSize}
-        className={tileClassName}
+        color={corner.color}
         key={`${i}`}
       />
     );
@@ -99,12 +120,12 @@ const CollPattern = ({ pattern }) => {
     // Draw side
     if (corner.leftColor) {
       svgEls.push(
-        <rect
+        <CollSideTile
           x={x - 11}
           y={y + 3}
           width={6}
           height={tileSize - 6}
-          className={`collTile -side -${corner.leftColor}`}
+          color={corner.leftColor}
           key={`${i}-left`}
         />
       );
@@ -112,12 +133,12 @@ const CollPattern = ({ pattern }) => {
 
     if (corner.topColor) {
       svgEls.push(
-        <rect
+        <CollSideTile
           x={x + 3}
           y={y - 11}
           width={tileSize - 6}
           height={6}
-          className={`collTile -side -${corner.topColor}`}
+          color={corner.topColor}
           key={`${i}-top`}
         />
       );
@@ -125,12 +146,12 @@ const CollPattern = ({ pattern }) => {
 
     if (corner.rightColor) {
       svgEls.push(
-        <rect
+        <CollSideTile
           x={x + tileSize + 5}
           y={y + 3}
           width={6}
           height={tileSize - 6}
-          className={`collTile -side -${corner.rightColor}`}
+          color={corner.rightColor}
           key={`${i}-right`}
         />
       );
@@ -138,27 +159,26 @@ const CollPattern = ({ pattern }) => {
 
     if (corner.bottomColor) {
       svgEls.push(
-        <rect
+        <CollSideTile
           x={x + 3}
           y={y + tileSize + 5}
           width={tileSize - 6}
           height={6}
-          className={`collTile -side -${corner.bottomColor}`}
+          color={corner.bottomColor}
           key={`${i}-bottom`}
         />
       );
     }
   }
   return (
-    <svg
+    <AlgPattern
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
       width="200"
       height="200"
-      className="algPattern"
     >
       {svgEls}
-    </svg>
+    </AlgPattern>
   );
 };
 

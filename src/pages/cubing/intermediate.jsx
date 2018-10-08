@@ -1,5 +1,12 @@
 import React from 'react';
 
+import {
+  AlgGrid,
+  AlgGridAlgs,
+  AlgGridItem
+} from '../../components/styled/cubing';
+import { Article } from '../../components/styled/article';
+import { MainContainer } from '../../components/styled/container';
 import F2lPattern from '../../components/cubing/f2l-pattern';
 import Layout from '../../components/layout';
 import OllPattern from '../../components/cubing/oll-pattern';
@@ -9,8 +16,8 @@ import intermediateCases from '../../data/cubing/intermediate-cases.yaml';
 
 const IntermediatePage = () => (
   <Layout tabs={cubingTabs}>
-    <div className="container -main">
-      <article className="article">
+    <MainContainer>
+      <Article>
         <h1>Intermediate algorithms</h1>
         <p>
           Here are a few algorithms selected from the Fridrich solution that you
@@ -19,56 +26,56 @@ const IntermediatePage = () => (
         </p>
 
         <h2>First two layers</h2>
-        <div className="algGrid">
+        <AlgGrid>
           {intermediateCases.f2l.map(f2lCase => (
-            <div className="algGrid__item" key={f2lCase.pattern}>
+            <AlgGridItem key={f2lCase.pattern}>
               <F2lPattern pattern={f2lCase.pattern} />
-              <b className="algGrid__algs">{f2lCase.alg}</b>
-            </div>
+              <AlgGridAlgs as="b">{f2lCase.alg}</AlgGridAlgs>
+            </AlgGridItem>
           ))}
-        </div>
+        </AlgGrid>
 
         <h2>Orient last layer edges</h2>
-        <div className="algGrid">
+        <AlgGrid>
           {intermediateCases.ollEdges.map(ollCase => (
-            <div className="algGrid__item" key={ollCase.pattern}>
+            <AlgGridItem key={ollCase.pattern}>
               <OllPattern pattern={ollCase.pattern} />
-              <b className="algGrid__algs">{ollCase.alg}</b>
-            </div>
+              <AlgGridAlgs as="b">{ollCase.alg}</AlgGridAlgs>
+            </AlgGridItem>
           ))}
-        </div>
+        </AlgGrid>
 
         <h2>Orient last layer corners</h2>
-        <div className="algGrid">
+        <AlgGrid>
           {intermediateCases.ollCorners.map(ollCase => (
-            <div className="algGrid__item" key={ollCase.pattern}>
+            <AlgGridItem key={ollCase.pattern}>
               <OllPattern pattern={ollCase.pattern} />
-              <b className="algGrid__algs">{ollCase.alg}</b>
-            </div>
+              <AlgGridAlgs as="b">{ollCase.alg}</AlgGridAlgs>
+            </AlgGridItem>
           ))}
-        </div>
+        </AlgGrid>
 
         <h2>Permute last layer corners</h2>
-        <div className="algGrid">
+        <AlgGrid>
           {intermediateCases.pllCorners.map(pllCase => (
-            <div className="algGrid__item" key={pllCase.pattern}>
+            <AlgGridItem key={pllCase.pattern}>
               <PllPattern pattern={pllCase.pattern} />
-              <b className="algGrid__algs">{pllCase.alg}</b>
-            </div>
+              <AlgGridAlgs as="b">{pllCase.alg}</AlgGridAlgs>
+            </AlgGridItem>
           ))}
-        </div>
+        </AlgGrid>
 
         <h2>Permute last layer edges</h2>
-        <div className="algGrid">
+        <AlgGrid>
           {intermediateCases.pllEdges.map(pllCase => (
-            <div className="algGrid__item" key={pllCase.pattern}>
+            <AlgGridItem key={pllCase.pattern}>
               <PllPattern pattern={pllCase.pattern} />
-              <b className="algGrid__algs">{pllCase.alg}</b>
-            </div>
+              <AlgGridAlgs as="b">{pllCase.alg}</AlgGridAlgs>
+            </AlgGridItem>
           ))}
-        </div>
-      </article>
-    </div>
+        </AlgGrid>
+      </Article>
+    </MainContainer>
   </Layout>
 );
 

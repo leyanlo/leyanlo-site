@@ -2,6 +2,16 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 import reactStringReplace from 'react-string-replace-recursively';
 
+import {
+  AlgGrid,
+  AlgGridAlgs,
+  AlgGridComments,
+  AlgGridIdAnchor,
+  AlgGridItem
+} from '../../components/styled/cubing';
+import { Article } from '../../components/styled/article';
+import { MainContainer } from '../../components/styled/container';
+import { StyledAnchor } from '../../components/styled/link';
 import Layout from '../../components/layout';
 import OllPattern from '../../components/cubing/oll-pattern';
 import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
@@ -11,32 +21,36 @@ const commentReplaceConfig = {
   oll: {
     pattern: /(OLL \d+)/g,
     matcherFn: (rawText, processed, key) => (
-      <OutboundLink href={`#${rawText.replace(/^OLL /, '')}`} key={key}>
+      <StyledAnchor
+        as={OutboundLink}
+        href={`#${rawText.replace(/^OLL /, '')}`}
+        key={key}
+      >
         {processed}
-      </OutboundLink>
+      </StyledAnchor>
     )
   }
 };
 
 const OllPage = () => (
   <Layout tabs={cubingTabs}>
-    <div className="container -main">
-      <article className="article">
+    <MainContainer>
+      <Article>
         <h1>Orient last layer algorithms</h1>
-        <div className="algGrid">
+        <AlgGrid>
           {ollCases.map(ollCase => (
-            <div className="algGrid__item" key={ollCase.id}>
-              <OutboundLink
+            <AlgGridItem key={ollCase.id}>
+              <AlgGridIdAnchor
+                as={OutboundLink}
                 href={`#${ollCase.id}`}
                 name={ollCase.id}
-                className="algGrid__id"
               >
                 {ollCase.id}
-              </OutboundLink>
+              </AlgGridIdAnchor>
               <OllPattern pattern={ollCase.pattern} />
-              <div className="algGrid__algs">
+              <AlgGridAlgs>
                 <b>{ollCase.alg}</b>
-                <ul className="algGrid__comments">
+                <AlgGridComments>
                   {ollCase.comments.map((comment, i) => (
                     <li key={`${ollCase.id}-${i}`}>
                       <small>
@@ -44,13 +58,13 @@ const OllPage = () => (
                       </small>
                     </li>
                   ))}
-                </ul>
-              </div>
-            </div>
+                </AlgGridComments>
+              </AlgGridAlgs>
+            </AlgGridItem>
           ))}
-        </div>
-      </article>
-    </div>
+        </AlgGrid>
+      </Article>
+    </MainContainer>
   </Layout>
 );
 

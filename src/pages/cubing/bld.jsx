@@ -1,48 +1,59 @@
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 
+import {
+  AlgGrid,
+  AlgGridBldAlgs,
+  AlgGridBldId,
+  AlgGridBldItem
+} from '../../components/styled/cubing';
+import { Article } from '../../components/styled/article';
+import { ListItem } from '../../components/styled/list';
+import { MainContainer } from '../../components/styled/container';
+import { StyledAnchor } from '../../components/styled/link';
 import Layout from '../../components/layout';
 import bldCases from '../../data/cubing/bld-cases.yaml';
 import cubingTabs from '../../data/cubing/cubing-tabs.yaml';
 
 const BldPage = () => (
   <Layout tabs={cubingTabs}>
-    <div className="container -main">
-      <article className="article">
+    <MainContainer>
+      <Article>
         <h1>Blindfold cubing</h1>
         <p>
           For an in-depth tutorial on blindfold cubing, please see{' '}
-          <OutboundLink
+          <StyledAnchor
+            as={OutboundLink}
             href="http://cubefreak.net/bld/3op_guide.php"
             target="_blank"
             rel="noopener noreferrer"
           >
             Shotaro (Macky) Makisumi’s guide
-          </OutboundLink>
+          </StyledAnchor>
           . Below, I have compiled all the algorithms I use for blindfold
           cubing.
         </p>
         {bldCases.map(section => (
           <section key={section.header}>
             <h2>{section.header}</h2>
-            <div className="algGrid">
+            <AlgGrid>
               {section.cases.map(bldCase => (
-                <div className="algGrid__item -bld" key={bldCase.id}>
-                  <span className="algGrid__id -bld">{bldCase.id}</span>
-                  <ul className="algGrid__algs -bld">
+                <AlgGridBldItem key={bldCase.id}>
+                  <AlgGridBldId>{bldCase.id}</AlgGridBldId>
+                  <AlgGridBldAlgs>
                     {bldCase.algs.map((alg, i) => (
-                      <li className="li" key={`${bldCase.id}-${i}`}>
+                      <ListItem key={`${bldCase.id}-${i}`}>
                         <b>{alg}</b>
-                      </li>
+                      </ListItem>
                     ))}
-                  </ul>
-                </div>
+                  </AlgGridBldAlgs>
+                </AlgGridBldItem>
               ))}
-            </div>
+            </AlgGrid>
           </section>
         ))}
-      </article>
-    </div>
+      </Article>
+    </MainContainer>
   </Layout>
 );
 

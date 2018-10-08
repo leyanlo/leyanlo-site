@@ -1,19 +1,21 @@
 import React from 'react';
 
+import { Article } from '../components/styled/article';
+import { MainContainer } from '../components/styled/container';
 import Layout from '../components/layout';
 
 const NotFoundPage = () => (
   <Layout>
-    <div className="container -main">
-      <article className="article">
+    <MainContainer>
+      <Article>
         <h1>Page not found</h1>
         <p>
           <span role="img" aria-label="sadface">
             😢
           </span>
         </p>
-      </article>
-    </div>
+      </Article>
+    </MainContainer>
   </Layout>
 );
 

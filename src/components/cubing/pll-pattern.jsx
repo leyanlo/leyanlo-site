@@ -1,10 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
+import { AlgPattern } from '../styled/cubing';
 import Point from './point';
 
 const tileStart = 34;
 const tileSize = 44;
+
+const PllTile = styled.rect`
+  fill: yellow;
+  stroke: black;
+  stroke-width: 4px;
+`;
+
+const PllArrow = styled.line`
+  stroke: black;
+  stroke-width: 2px;
+`;
 
 /**
  * @param {number[][]} pattern - E.g. [[7, 9], [9, 7]]
@@ -18,12 +31,11 @@ const PllPattern = ({ pattern }) => {
     const x = tileStart + tileSize * (i % 3);
     const y = tileStart + tileSize * Math.floor(i / 3);
     svgEls.push(
-      <rect
+      <PllTile
         x={x}
         y={y}
         width={tileSize}
         height={tileSize}
-        className="pllTile"
         key={`${pattern}-${i}`}
       />
     );
@@ -36,24 +48,22 @@ const PllPattern = ({ pattern }) => {
     const arrowStart = Point.lerpBy(centerStart, centerEnd, 12);
     const arrowEnd = Point.lerpBy(centerEnd, centerStart, 16);
     svgEls.push(
-      <line
+      <PllArrow
         x1={arrowStart.x.toFixed(2)}
         y1={arrowStart.y.toFixed(2)}
         x2={arrowEnd.x.toFixed(2)}
         y2={arrowEnd.y.toFixed(2)}
-        className="pllArrow"
         markerEnd="url(#arrowHead)"
         key={`${pattern}-arrow-${i}`}
       />
     );
   }
   return (
-    <svg
+    <AlgPattern
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
       width="200"
       height="200"
-      className="algPattern"
     >
       <defs>
         <marker
@@ -68,7 +78,7 @@ const PllPattern = ({ pattern }) => {
         </marker>
       </defs>
       {svgEls}
-    </svg>
+    </AlgPattern>
   );
 };
 

@@ -1,30 +1,37 @@
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 
+import { Article } from '../components/styled/article';
+import { ListItem, UnorderedList } from '../components/styled/list';
+import { MainContainer } from '../components/styled/container';
+import { StyledAnchor, StyledAnchorIcon } from '../components/styled/link';
 import FileIcon from '../images/icon-file.svg';
 import Layout from '../components/layout';
 
 const SoftwarePage = () => (
   <Layout>
-    <div className="container -main">
-      <article className="article">
+    <MainContainer>
+      <Article>
         <h1>Software engineer</h1>
         <p>I like making things! My interests include:</p>
-        <ul className="ul">
-          <li className="li">Designing coherent UX systems</li>
-          <li className="li">Refactoring codebases</li>
-          <li className="li">Streamlining build systems</li>
-          <li className="li">Debugging minified code</li>
-          <li className="li">Building a prettier git log</li>
-        </ul>
+        <UnorderedList>
+          <ListItem>Designing coherent UX systems</ListItem>
+          <ListItem>Refactoring codebases</ListItem>
+          <ListItem>Streamlining build systems</ListItem>
+          <ListItem>Debugging minified code</ListItem>
+          <ListItem>Building a prettier git log</ListItem>
+        </UnorderedList>
         <p>
-          <OutboundLink href="/docs/leyan-lo-resume-2018-03-21.pdf">
-            <FileIcon className="linkIcon" />
+          <StyledAnchor
+            as={OutboundLink}
+            href="/docs/leyan-lo-resume-2018-03-21.pdf"
+          >
+            <StyledAnchorIcon as={FileIcon} />
             Download my resume
-          </OutboundLink>
+          </StyledAnchor>
         </p>
-      </article>
-    </div>
+      </Article>
+    </MainContainer>
   </Layout>
 );
 

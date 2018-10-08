@@ -1,7 +1,13 @@
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import React from 'react';
 
+import {
+  Hero,
+  HeroCard,
+  HeroContent,
+  HeroHr,
+  HeroImage
+} from '../components/styled/hero';
 import Layout from '../components/layout';
 
 const IndexPage = () => (
@@ -19,28 +25,27 @@ const IndexPage = () => (
     `}
     render={data => (
       <Layout>
-        <div className="hero">
-          <div className="hero__card">
-            <Img
+        <Hero>
+          <HeroCard>
+            <HeroImage
               fixed={data.headshotFile.childImageSharp.fixed}
               alt="Headshot"
-              className="hero__image"
               style={{
                 position: 'absolute'
               }}
             />
-            <div className="hero__content">
+            <HeroContent>
               <h1>Leyan Lo</h1>
-              <hr className="hero__hr" />
+              <HeroHr />
               <h3>Software engineer</h3>
               <p>
                 Amateur violinist
                 <br />
                 Former world record Rubik’s&nbsp;cube&nbsp;solver
               </p>
-            </div>
-          </div>
-        </div>
+            </HeroContent>
+          </HeroCard>
+        </Hero>
       </Layout>
     )}
   />

@@ -1,11 +1,14 @@
 // Global CSS
-import './src/styles/_all.css';
+import './src/global.css';
 import 'typeface-source-sans-pro';
 import 'typeface-source-serif-pro';
 import FontFaceObserver from 'fontfaceobserver';
 
 const typefaces = {
-  'Source Sans Pro': [{ weight: 400, style: 'normal' }, { weight: 600, style: 'normal' }],
+  'Source Sans Pro': [
+    { weight: 400, style: 'normal' },
+    { weight: 600, style: 'normal' }
+  ],
   'Source Serif Pro': [{ weight: 600, style: 'normal' }]
 };
 

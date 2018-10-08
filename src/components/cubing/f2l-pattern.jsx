@@ -1,7 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
+import { AlgPattern } from '../styled/cubing';
 import Point from './point';
+
+const f2lColor = {
+  W: 'white',
+  R: 'red',
+  B: 'blue',
+  Y: 'yellow'
+};
+
+const F2lTile = styled.polygon`
+  fill: ${props => f2lColor[props.color] || `lightgray`};
+  stroke: black;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+`;
 
 class Tile {
   /**
@@ -80,7 +96,7 @@ const tiles = [
 const F2LPattern = ({ pattern }) => {
   const p = pattern.split('');
   const tilePolygons = tiles.map((tile, i) => (
-    <polygon
+    <F2lTile
       key={`${pattern}-${i}`}
       points={`
         ${tile.p1.x.toFixed(2)},${tile.p1.y.toFixed(2)}
@@ -88,19 +104,18 @@ const F2LPattern = ({ pattern }) => {
         ${tile.p3.x.toFixed(2)},${tile.p3.y.toFixed(2)}
         ${tile.p4.x.toFixed(2)},${tile.p4.y.toFixed(2)}
       `}
-      className={`f2lTile -${p[i]}`}
+      color={p[i]}
     />
   ));
   return (
-    <svg
+    <AlgPattern
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
       width="200"
       height="200"
-      className="algPattern"
     >
       {tilePolygons}
-    </svg>
+    </AlgPattern>
   );
 };
 

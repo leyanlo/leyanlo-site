@@ -3,6 +3,16 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React from 'react';
 import reactStringReplace from 'react-string-replace-recursively';
 
+import {
+  AlgGrid,
+  AlgGridAlgs,
+  AlgGridCollIdAnchor,
+  AlgGridComments,
+  AlgGridItem
+} from '../../components/styled/cubing';
+import { Article } from '../../components/styled/article';
+import { MainContainer } from '../../components/styled/container';
+import { StyledAnchor } from '../../components/styled/link';
 import CollPattern from '../../components/cubing/coll-pattern';
 import Layout from '../../components/layout';
 import collCases from '../../data/cubing/coll-cases.yaml';
@@ -12,48 +22,60 @@ const commentReplaceConfig = {
   f2l: {
     pattern: /(F2L \d+)/g,
     matcherFn: (rawText, processed, key) => (
-      <Link to={`/cubing/f2l/#${rawText.replace(/^F2L /, '')}`} key={key}>
+      <StyledAnchor
+        as={Link}
+        to={`/cubing/f2l/#${rawText.replace(/^F2L /, '')}`}
+        key={key}
+      >
         {processed}
-      </Link>
+      </StyledAnchor>
     )
   },
   oll: {
     pattern: /(OLL \d+)/g,
     matcherFn: (rawText, processed, key) => (
-      <Link to={`/cubing/oll/#${rawText.replace(/^OLL /, '')}`} key={key}>
+      <StyledAnchor
+        as={Link}
+        to={`/cubing/oll/#${rawText.replace(/^OLL /, '')}`}
+        key={key}
+      >
         {processed}
-      </Link>
+      </StyledAnchor>
     )
   },
   coll: {
     pattern: /(COLL \D+\d)/g,
     matcherFn: (rawText, processed, key) => (
-      <OutboundLink href={`#${rawText.replace(/^COLL /, '')}`} key={key}>
+      <StyledAnchor
+        as={OutboundLink}
+        href={`#${rawText.replace(/^COLL /, '')}`}
+        key={key}
+      >
         {processed}
-      </OutboundLink>
+      </StyledAnchor>
     )
   }
 };
 
 const CollPage = () => (
   <Layout tabs={cubingTabs}>
-    <div className="container -main">
-      <article className="article">
+    <MainContainer>
+      <Article>
         <h1>Orient last layer algorithms</h1>
-        <div className="algGrid">
+        <AlgGrid>
           {collCases.map(collCase => (
-            <div className="algGrid__item" key={collCase.id}>
-              <OutboundLink
+            <AlgGridItem key={collCase.id}>
+              <AlgGridCollIdAnchor
+                as={OutboundLink}
                 href={`#${collCase.id}`}
                 name={collCase.id}
-                className="algGrid__id -coll"
               >
                 {collCase.id}
-              </OutboundLink>
+              </AlgGridCollIdAnchor>
               <CollPattern pattern={collCase.pattern} />
-              <div className="algGrid__algs">
+              <AlgGridAlgs>
                 <b>{collCase.alg}</b>
-                <ul className="algGrid__comments">
+                <AlgGridComments>
                   {collCase.comments.map((comment, i) => (
                     <li key={`${collCase.id}-${i}`}>
                       <small>
@@ -61,13 +83,13 @@ const CollPage = () => (
                       </small>
                     </li>
                   ))}
-                </ul>
-              </div>
-            </div>
+                </AlgGridComments>
+              </AlgGridAlgs>
+            </AlgGridItem>
           ))}
-        </div>
-      </article>
-    </div>
+        </AlgGrid>
+      </Article>
+    </MainContainer>
   </Layout>
 );
 

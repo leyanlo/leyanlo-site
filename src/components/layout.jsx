@@ -2,9 +2,36 @@ import { StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
 import Header from './header';
 import Tabs from './tabs';
+
+const Main = styled.main`
+  /* iOS Safari typically adds 112px of toolbars */
+  --mainMinHeight: calc(
+    100vh - var(--headerHeight) - var(--navbarHeight) - var(--tabsHeight) -
+      112px
+  );
+
+  display: flex;
+  flex-direction: column;
+  min-height: var(--mainMinHeight);
+  padding-right: var(--safeAreaInsetRight);
+  padding-bottom: calc(
+    var(--safeAreaInsetBottom) + var(--navbarHeight) + var(--tabsHeight)
+  );
+  padding-left: var(--safeAreaInsetLeft);
+  ${props => (props['has-tabs'] ? `--tabsHeight: 40px` : ``)};
+
+  /* Desktop */
+  @media screen and (min-width: 1024px) {
+    /* No toolbars */
+    --mainMinHeight: calc(100vh - var(--headerHeight));
+
+    padding-bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
+  }
+`;
 
 const Layout = ({ children, tabs }) => (
   <StaticQuery
@@ -66,10 +93,10 @@ const Layout = ({ children, tabs }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main className={`main ${tabs ? '-hasTabs' : ''}`}>
+        <Main has-tabs={tabs}>
           {tabs && <Tabs tabs={tabs} />}
           {children}
-        </main>
+        </Main>
       </>
     )}
   />
