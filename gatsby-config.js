@@ -5,10 +5,6 @@ module.exports = {
     keywords: 'software, violin, cubing'
   },
   plugins: [
-    'gatsby-plugin-offline',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -29,18 +25,22 @@ module.exports = {
         icon: 'src/images/logo.png'
       }
     },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         include: /images/
       }
     },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
         path: `${__dirname}/src/images/`
       }
-    }
+    },
+    'gatsby-transformer-sharp'
   ]
 };
