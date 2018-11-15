@@ -14,7 +14,11 @@ const PllPage = () => (
         <div className="algGrid">
           {pllCases.map(pllCase => (
             <div className="algGrid__item" key={pllCase.pattern}>
-              <OutboundLink href={`#${pllCase.id}`} name={pllCase.id} className="algGrid__id -pll">
+              <OutboundLink
+                href={`#${pllCase.id}`}
+                name={pllCase.id}
+                className="algGrid__id -pll"
+              >
                 {pllCase.id}
               </OutboundLink>
               <PllPattern pattern={pllCase.pattern} />

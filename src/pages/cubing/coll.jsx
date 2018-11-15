@@ -43,7 +43,11 @@ const CollPage = () => (
         <div className="algGrid">
           {collCases.map(collCase => (
             <div className="algGrid__item" key={collCase.id}>
-              <OutboundLink href={`#${collCase.id}`} name={collCase.id} className="algGrid__id -coll">
+              <OutboundLink
+                href={`#${collCase.id}`}
+                name={collCase.id}
+                className="algGrid__id -coll"
+              >
                 {collCase.id}
               </OutboundLink>
               <CollPattern pattern={collCase.pattern} />
@@ -52,7 +56,9 @@ const CollPage = () => (
                 <ul className="algGrid__comments">
                   {collCase.comments.map((comment, i) => (
                     <li key={`${collCase.id}-${i}`}>
-                      <small>{reactStringReplace(commentReplaceConfig)(comment)}</small>
+                      <small>
+                        {reactStringReplace(commentReplaceConfig)(comment)}
+                      </small>
                     </li>
                   ))}
                 </ul>

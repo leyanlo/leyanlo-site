@@ -39,7 +39,11 @@ function getRowTiles(p1, p2, p3, p4) {
   const p3a = Point.lerp(p3, p4, 1 / 3);
   const p3b = Point.lerp(p3, p4, 2 / 3);
 
-  return [new Tile(p1, p1a, p3b, p4), new Tile(p1a, p1b, p3a, p3b), new Tile(p1b, p2, p3, p3a)];
+  return [
+    new Tile(p1, p1a, p3b, p4),
+    new Tile(p1a, p1b, p3a, p3b),
+    new Tile(p1b, p2, p3, p3a)
+  ];
 }
 
 /**
@@ -55,7 +59,11 @@ function getFaceTiles(p1, p2, p3, p4) {
   const p4a = Point.lerp(p4, p1, 1 / 3);
   const p4b = Point.lerp(p4, p1, 2 / 3);
 
-  return [...getRowTiles(p1, p2, p2a, p4b), ...getRowTiles(p4b, p2a, p2b, p4a), ...getRowTiles(p4a, p2b, p3, p4)];
+  return [
+    ...getRowTiles(p1, p2, p2a, p4b),
+    ...getRowTiles(p4b, p2a, p2b, p4a),
+    ...getRowTiles(p4a, p2b, p3, p4)
+  ];
 }
 
 const tiles = [
@@ -84,7 +92,13 @@ const F2LPattern = ({ pattern }) => {
     />
   ));
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" className="algPattern">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 200 200"
+      width="200"
+      height="200"
+      className="algPattern"
+    >
       {tilePolygons}
     </svg>
   );

@@ -7,7 +7,10 @@ const ViolinPage = () => (
     <div className="container -main">
       <article className="article">
         <h1>Amateur violinist</h1>
-        <p>I enjoy playing chamber music with friends, and sometimes I fall asleep at concerts.</p>
+        <p>
+          I enjoy playing chamber music with friends, and sometimes I fall
+          asleep at concerts.
+        </p>
         <figure className="article__figure">
           <div className="article__youtubeContainer">
             <iframe
@@ -19,7 +22,9 @@ const ViolinPage = () => (
               allowFullScreen
             />
           </div>
-          <figcaption className="article__figcaption">2017 SLSQ Seminar at Stanford</figcaption>
+          <figcaption className="article__figcaption">
+            2017 SLSQ Seminar at Stanford
+          </figcaption>
         </figure>
       </article>
     </div>

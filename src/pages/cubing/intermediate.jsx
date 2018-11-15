@@ -13,8 +13,9 @@ const IntermediatePage = () => (
       <article className="article">
         <h1>Intermediate algorithms</h1>
         <p>
-          Here are a few algorithms selected from the Fridrich solution that you can learn to improve your times after
-          mastering the beginner’s solution.
+          Here are a few algorithms selected from the Fridrich solution that you
+          can learn to improve your times after mastering the beginner’s
+          solution.
         </p>
 
         <h2>First two layers</h2>

@@ -40,7 +40,16 @@ const CollPattern = ({ pattern }) => {
         corner = { color: 'Y' };
     }
     const tileClassName = `collTile -${corner.color}`;
-    svgEls.push(<rect x={x} y={y} width={tileSize} height={tileSize} className={tileClassName} key={`${i}`} />);
+    svgEls.push(
+      <rect
+        x={x}
+        y={y}
+        width={tileSize}
+        height={tileSize}
+        className={tileClassName}
+        key={`${i}`}
+      />
+    );
 
     // Draw label
     if (corner.label) {
@@ -141,7 +150,13 @@ const CollPattern = ({ pattern }) => {
     }
   }
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" className="algPattern">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 200 200"
+      width="200"
+      height="200"
+      className="algPattern"
+    >
       {svgEls}
     </svg>
   );

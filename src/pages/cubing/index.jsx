@@ -10,8 +10,9 @@ const CubingPage = () => (
       <article className="article">
         <h1>Speedcubing</h1>
         <p>
-          I set the world record for solving the Rubik’s cube in 2006 in 11.13 seconds. I also set seven world records
-          for solving the Rubik’s cube blindfolded.
+          I set the world record for solving the Rubik’s cube in 2006 in 11.13
+          seconds. I also set seven world records for solving the Rubik’s cube
+          blindfolded.
         </p>
         <p>
           <OutboundLink
@@ -26,7 +27,11 @@ const CubingPage = () => (
         <ul className="ul">
           <li className="li">
             1/14/06:{' '}
-            <OutboundLink href="http://youtu.be/uNBFGl7ErJE" target="_blank" rel="noopener noreferrer">
+            <OutboundLink
+              href="http://youtu.be/uNBFGl7ErJE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               11.13 second speedsolve world record
             </OutboundLink>
           </li>
@@ -52,31 +57,51 @@ const CubingPage = () => (
           </li>
           <li className="li">
             3/11/06:{' '}
-            <OutboundLink href="http://youtu.be/JCkI2qh1SF4" target="_blank" rel="noopener noreferrer">
+            <OutboundLink
+              href="http://youtu.be/JCkI2qh1SF4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               1:28.82 blindfold solve world record
             </OutboundLink>
           </li>
           <li className="li">
             5/10/06:{' '}
-            <OutboundLink href="/video/2006-05-10-jeopardy.mpg" target="_blank" rel="noopener noreferrer">
+            <OutboundLink
+              href="/video/2006-05-10-jeopardy.mpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Jeopardy question
             </OutboundLink>
           </li>
           <li className="li">
             11/28/06:{' '}
-            <OutboundLink href="/video/2006-11-28-zefrank.m4v" target="_blank" rel="noopener noreferrer">
+            <OutboundLink
+              href="/video/2006-11-28-zefrank.m4v"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               the show with zefrank
             </OutboundLink>
           </li>
           <li className="li">
             9/28/07:{' '}
-            <OutboundLink href="/video/2007-09-28-cnn-american-morning.mp4" target="_blank" rel="noopener noreferrer">
+            <OutboundLink
+              href="/video/2007-09-28-cnn-american-morning.mp4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               CNN American Morning
             </OutboundLink>
           </li>
           <li className="li">
             1/16/09:{' '}
-            <OutboundLink href="/video/2009-01-16-abc-7.mp4" target="_blank" rel="noopener noreferrer">
+            <OutboundLink
+              href="/video/2009-01-16-abc-7.mp4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               ABC News
             </OutboundLink>
           </li>
@@ -115,7 +140,11 @@ const CubingPage = () => (
           </li>
           <li className="li">
             2/2/07:{' '}
-            <OutboundLink href="/docs/pacific-citizen-article.pdf" target="_blank" rel="noopener noreferrer">
+            <OutboundLink
+              href="/docs/pacific-citizen-article.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Pacific Citizen
             </OutboundLink>
           </li>

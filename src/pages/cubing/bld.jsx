@@ -12,10 +12,15 @@ const BldPage = () => (
         <h1>Blindfold cubing</h1>
         <p>
           For an in-depth tutorial on blindfold cubing, please see{' '}
-          <OutboundLink href="http://cubefreak.net/bld/3op_guide.php" target="_blank" rel="noopener noreferrer">
+          <OutboundLink
+            href="http://cubefreak.net/bld/3op_guide.php"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Shotaro (Macky) Makisumi’s guide
           </OutboundLink>
-          . Below, I have compiled all the algorithms I use for blindfold cubing.
+          . Below, I have compiled all the algorithms I use for blindfold
+          cubing.
         </p>
         {bldCases.map(section => (
           <section key={section.header}>

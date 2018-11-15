@@ -14,7 +14,11 @@ const F2LPage = () => (
         <div className="algGrid">
           {f2lCases.map(f2lCase => (
             <div className="algGrid__item" key={f2lCase.id}>
-              <OutboundLink href={`#${f2lCase.id}`} name={f2lCase.id} className="algGrid__id">
+              <OutboundLink
+                href={`#${f2lCase.id}`}
+                name={f2lCase.id}
+                className="algGrid__id"
+              >
                 {f2lCase.id}
               </OutboundLink>
               <F2lPattern pattern={f2lCase.pattern} />

@@ -24,18 +24,36 @@ const Layout = ({ children, tabs }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: data.site.siteMetadata.description },
+            {
+              name: 'description',
+              content: data.site.siteMetadata.description
+            },
             { name: 'keywords', content: data.site.siteMetadata.keywords },
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:site', content: '@leyanlo' },
             { property: 'og:title', content: data.site.siteMetadata.title },
-            { property: 'og:description', content: data.site.siteMetadata.description },
-            { property: 'og:image', content: 'https://www.leyanlo.com/img/logo-fb.png' },
+            {
+              property: 'og:description',
+              content: data.site.siteMetadata.description
+            },
+            {
+              property: 'og:image',
+              content: 'https://www.leyanlo.com/img/logo-fb.png'
+            },
             { property: 'og:url', content: 'https://www.leyanlo.com/' },
             { property: 'og:site_name', content: data.site.siteMetadata.title },
-            { property: 'twitter:title', content: data.site.siteMetadata.title },
-            { property: 'twitter:description', content: data.site.siteMetadata.description },
-            { property: 'twitter:image', content: 'https://www.leyanlo.com/img/logo-fb.png' }
+            {
+              property: 'twitter:title',
+              content: data.site.siteMetadata.title
+            },
+            {
+              property: 'twitter:description',
+              content: data.site.siteMetadata.description
+            },
+            {
+              property: 'twitter:image',
+              content: 'https://www.leyanlo.com/img/logo-fb.png'
+            }
           ]}
           link={[
             {

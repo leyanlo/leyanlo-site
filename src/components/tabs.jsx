@@ -23,7 +23,8 @@ const Tabs = ({ tabs }) => (
           if (location.state) {
             scrollLeft = location.state.tabsScrollLeft;
           } else if (document.querySelector('.tabs__link.-active')) {
-            scrollLeft = document.querySelector('.tabs__link.-active').offsetLeft;
+            scrollLeft = document.querySelector('.tabs__link.-active')
+              .offsetLeft;
           } else {
             scrollLeft = 0;
           }
@@ -41,7 +42,11 @@ const Tabs = ({ tabs }) => (
               }
               return (
                 <li key={tab.to}>
-                  <OutboundLink href={tab.to} className={className} onClick={onClick}>
+                  <OutboundLink
+                    href={tab.to}
+                    className={className}
+                    onClick={onClick}
+                  >
                     {tab.title}
                   </OutboundLink>
                 </li>

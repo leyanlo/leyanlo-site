@@ -16,7 +16,14 @@ const OllPattern = ({ pattern }) => {
     const x = tileStart + tileSize * (i % 3);
     const y = tileStart + tileSize * Math.floor(i / 3);
     svgEls.push(
-      <rect x={x} y={y} width={tileSize} height={tileSize} className={`ollTile -${p[i]}`} key={`${pattern}-${i}`} />
+      <rect
+        x={x}
+        y={y}
+        width={tileSize}
+        height={tileSize}
+        className={`ollTile -${p[i]}`}
+        key={`${pattern}-${i}`}
+      />
     );
     switch (p[i]) {
       case 'L':
@@ -71,7 +78,13 @@ const OllPattern = ({ pattern }) => {
     }
   }
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" className="algPattern">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 200 200"
+      width="200"
+      height="200"
+      className="algPattern"
+    >
       {svgEls}
     </svg>
   );

@@ -17,7 +17,16 @@ const PllPattern = ({ pattern }) => {
   for (let i = 0; i < 9; ++i) {
     const x = tileStart + tileSize * (i % 3);
     const y = tileStart + tileSize * Math.floor(i / 3);
-    svgEls.push(<rect x={x} y={y} width={tileSize} height={tileSize} className="pllTile" key={`${pattern}-${i}`} />);
+    svgEls.push(
+      <rect
+        x={x}
+        y={y}
+        width={tileSize}
+        height={tileSize}
+        className="pllTile"
+        key={`${pattern}-${i}`}
+      />
+    );
     tileCenters.push(new Point(x + tileSize / 2, y + tileSize / 2));
   }
   for (let i = 0; i < pattern.length; ++i) {
@@ -39,9 +48,22 @@ const PllPattern = ({ pattern }) => {
     );
   }
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" className="algPattern">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 200 200"
+      width="200"
+      height="200"
+      className="algPattern"
+    >
       <defs>
-        <marker id="arrowHead" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto">
+        <marker
+          id="arrowHead"
+          markerWidth="6"
+          markerHeight="6"
+          refX="0"
+          refY="3"
+          orient="auto"
+        >
           <path d="M0,0 L0,6 L6,3 z" />
         </marker>
       </defs>
@@ -51,7 +73,9 @@ const PllPattern = ({ pattern }) => {
 };
 
 PllPattern.propTypes = {
-  pattern: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number.isRequired).isRequired).isRequired
+  pattern: PropTypes.arrayOf(
+    PropTypes.arrayOf(PropTypes.number.isRequired).isRequired
+  ).isRequired
 };
 
 export default PllPattern;

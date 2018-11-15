@@ -26,7 +26,11 @@ const OllPage = () => (
         <div className="algGrid">
           {ollCases.map(ollCase => (
             <div className="algGrid__item" key={ollCase.id}>
-              <OutboundLink href={`#${ollCase.id}`} name={ollCase.id} className="algGrid__id">
+              <OutboundLink
+                href={`#${ollCase.id}`}
+                name={ollCase.id}
+                className="algGrid__id"
+              >
                 {ollCase.id}
               </OutboundLink>
               <OllPattern pattern={ollCase.pattern} />
@@ -35,7 +39,9 @@ const OllPage = () => (
                 <ul className="algGrid__comments">
                   {ollCase.comments.map((comment, i) => (
                     <li key={`${ollCase.id}-${i}`}>
-                      <small>{reactStringReplace(commentReplaceConfig)(comment)}</small>
+                      <small>
+                        {reactStringReplace(commentReplaceConfig)(comment)}
+                      </small>
                     </li>
                   ))}
                 </ul>

@@ -40,7 +40,8 @@
   padding: 0 16px;
   color: var(--mediumGray);
   font-size: var(--fontSmall);
-  transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1), box-shadow 500ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1),
+    box-shadow 500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .tabs__link.-active {
