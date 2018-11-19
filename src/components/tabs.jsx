@@ -1,5 +1,4 @@
 import { Location, navigate } from '@reach/router';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -42,13 +41,9 @@ const Tabs = ({ tabs }) => (
               }
               return (
                 <li key={tab.to}>
-                  <OutboundLink
-                    href={tab.to}
-                    className={className}
-                    onClick={onClick}
-                  >
+                  <a href={tab.to} className={className} onClick={onClick}>
                     {tab.title}
-                  </OutboundLink>
+                  </a>
                 </li>
               );
             })}
