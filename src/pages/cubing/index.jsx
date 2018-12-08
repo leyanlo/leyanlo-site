@@ -38,7 +38,7 @@ const CubingPage = () => (
           <li className="li">
             1/23/06:{' '}
             <OutboundLink
-              href="/video/2006-01-23-leyan-lo-imposter-on-letterman.mpg"
+              href="/video/2006-01-23-leyan-lo-impostor-on-letterman.mpg"
               target="_blank"
               rel="noopener noreferrer"
             >
