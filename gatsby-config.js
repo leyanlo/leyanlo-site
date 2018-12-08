@@ -34,7 +34,12 @@ module.exports = {
       }
     },
     'gatsby-plugin-sharp',
-    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-styled-components',
+      options: {
+        displayName: false
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
