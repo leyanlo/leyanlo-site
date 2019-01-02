@@ -7,6 +7,7 @@
 
 body {
   /* Dimensions */
+  --iOSSafariToolbarHeight: 112px;
   --headerHeight: 48px;
   --navbarHeight: 48px;
   --tabsHeight: 0px;

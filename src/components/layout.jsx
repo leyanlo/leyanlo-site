@@ -8,10 +8,9 @@ import Header from './header';
 import Tabs from './tabs';
 
 const Main = styled.main`
-  /* iOS Safari typically adds 112px of toolbars */
   --mainMinHeight: calc(
     100vh - var(--headerHeight) - var(--navbarHeight) - var(--tabsHeight) -
-      112px
+      var(--iOSSafariToolbarHeight)
   );
 
   display: flex;
