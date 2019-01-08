@@ -12,6 +12,7 @@ import HeaderLinkedinIcon from '../images/header-linkedin.svg';
 import HeaderTwitterIcon from '../images/header-twitter.svg';
 import LogoIcon from '../images/logo.svg';
 import Navbar from './navbar';
+import media from './styled/media';
 
 const StyledHeader = styled.header`
   padding-right: var(--safeAreaInsetRight);
@@ -41,11 +42,9 @@ const HeaderIcon = styled.svg`
   height: 24px;
   margin: auto 8px;
   opacity: 0.8;
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  ${media.desktop`
     margin: auto 12px;
-  }
+  `};
 `;
 
 const BrandAnchor = styled(StyledAnchor)`
@@ -59,11 +58,9 @@ const BrandLogo = styled(LogoIcon)`
   height: 32px;
   margin-right: 8px;
   opacity: 0.8;
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  ${media.desktop`
     margin-left: 8px;
-  }
+  `};
 `;
 
 const BrandTitle = styled.span`
@@ -73,11 +70,9 @@ const BrandTitle = styled.span`
   color: var(--darkGray);
   font-weight: 600;
   font-size: var(--fontLarge);
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  ${media.desktop`
     margin: 0 32px 0 0;
-  }
+  `};
 `;
 
 const Header = ({ siteTitle }) => (

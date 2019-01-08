@@ -7,6 +7,7 @@ import NavbarCubingIcon from '../images/navbar-cubing.svg';
 import NavbarHomeIcon from '../images/navbar-home.svg';
 import NavbarLaptopIcon from '../images/navbar-laptop.svg';
 import NavbarViolinIcon from '../images/navbar-violin.svg';
+import media from './styled/media';
 
 const Navbar = styled.nav`
   position: fixed;
@@ -20,34 +21,28 @@ const Navbar = styled.nav`
   padding-bottom: var(--safeAreaInsetBottom);
   padding-left: var(--safeAreaInsetLeft);
   background-color: var(--navbarBackground);
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  ${media.desktop`
     position: initial;
     width: initial;
     height: 100%;
     padding: 0;
     background-color: transparent;
-  }
+  `};
 `;
 
 const NavbarIcon = styled.svg`
   flex-grow: 1;
   width: 24px;
   height: 24px;
-
-  /* Tablet or landscape phone */
-  @media screen and (min-width: 769px), screen and (orientation: landscape) {
+  ${media.tabletOrLandscape`
     flex-grow: 0;
     width: 16px;
     height: 16px;
     margin-right: 8px;
-  }
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  `};
+  ${media.desktop`
     display: none;
-  }
+  `};
 `;
 
 const NavbarLink = styled(StyledAnchor)`
@@ -62,27 +57,22 @@ const NavbarLink = styled(StyledAnchor)`
   &[partially-active] {
     color: var(--linkColor);
     fill: var(--linkColor);
-
-    /* Desktop */
-    @media screen and (min-width: 1024px) {
+    ${media.desktop`
       font-weight: bold;
-    }
+    `};
   }
 
-  /* Tablet or landscape phone */
-  @media screen and (min-width: 769px), screen and (orientation: landscape) {
+  ${media.tabletOrLandscape`
     flex-direction: row;
     justify-content: center;
-  }
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  `};
+  ${media.desktop`
     flex-direction: row;
     padding: 0 16px;
     font-size: var(--fontMedium);
     text-transform: uppercase;
     ${props => (props['hidden-tablet'] ? `display: none` : ``)};
-  }
+  `};
 `;
 
 const isPartiallyActive = ({ isPartiallyCurrent }) =>

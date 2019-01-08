@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 
 import { fadeUp } from './animations';
+import media from './media';
 
 export const Article = styled.article`
   padding: 16px 16px 32px;
   background: white;
   opacity: 0;
   animation: ${fadeUp} 0.75s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  ${media.desktop`
     padding: 48px 48px 96px;
-  }
+  `};
 `;
 
 export const ArticleFigure = styled.figure`
@@ -19,12 +18,10 @@ export const ArticleFigure = styled.figure`
   flex-direction: column;
   align-items: center;
   margin: 32px -16px;
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  ${media.desktop`
     margin-right: -48px;
     margin-left: -48px;
-  }
+  `};
 `;
 
 export const ArticleYoutubeContainer = styled.div`

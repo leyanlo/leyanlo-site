@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { StyledAnchor } from './styled/link';
+import media from './styled/media';
 
 const StyledTabs = styled.ul`
   position: fixed;
@@ -39,8 +40,7 @@ const StyledTabs = styled.ul`
     content: '';
   }
 
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  ${media.desktop`
     position: static;
     justify-content: center;
     overflow-x: visible;
@@ -49,7 +49,7 @@ const StyledTabs = styled.ul`
     ::after {
       display: none;
     }
-  }
+  `};
 `;
 
 const TabLink = styled(StyledAnchor)`
@@ -68,13 +68,11 @@ const TabLink = styled(StyledAnchor)`
           box-shadow: inset 0 -1px 0 0 var(--linkColor);
         `
       : ``};
-
-  /* Non-touchscreen */
-  @media (hover: hover) {
+  ${media.nonTouchscreen`
     :hover {
       box-shadow: inset 0 -1px 0 0 var(--mediumGray);
     }
-  }
+  `};
 `;
 
 function onClick(e) {

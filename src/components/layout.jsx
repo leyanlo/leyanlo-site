@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import Header from './header';
 import Tabs from './tabs';
+import media from './styled/media';
 
 const Main = styled.main`
   --mainMinHeight: calc(
@@ -22,14 +23,12 @@ const Main = styled.main`
   );
   padding-left: var(--safeAreaInsetLeft);
   ${props => (props['has-tabs'] ? `--tabsHeight: 40px` : ``)};
-
-  /* Desktop */
-  @media screen and (min-width: 1024px) {
+  ${media.desktop`
     /* No toolbars */
     --mainMinHeight: calc(100vh - var(--headerHeight));
 
     padding-bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
-  }
+  `};
 `;
 
 const Layout = ({ children, tabs }) => (

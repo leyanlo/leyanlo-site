@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import media from './media';
+
 export const StyledAnchor = styled.a`
   color: var(--linkColor);
   text-decoration: none;
@@ -11,12 +13,11 @@ export const StyledAnchor = styled.a`
     pointer-events: none;
   }
 
-  /* Non-touchscreen */
-  @media (hover: hover) {
+  ${media.nonTouchscreen`
     :hover {
       opacity: 0.6;
     }
-  }
+  `};
 `;
 
 export const StyledAnchorIcon = styled.svg`
