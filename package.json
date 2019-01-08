@@ -39,7 +39,7 @@
     "format": "npm-run-all -p format:js format:css",
     "format:js": "prettier --write 'src/**/*.{js,jsx,json,yaml}'",
     "format:css": "prettier --write 'src/**/*.css'",
-    "lint": "npm-run-all -p lint:js lint:css",
+    "lint": "npm-run-all -p lint:js lint:css lint:css-js",
     "lint:js": "eslint --fix --ignore-path .gitignore 'src/**/*.{js,jsx}'",
     "lint:css": "stylelint --fix 'src/**/*.css'",
     "lint:css-js": "stylelint --config stylelint-js.config.js 'src/**/*.{js,jsx}'",
