@@ -40,9 +40,11 @@ const StyledTabs = styled.ul`
     content: '';
   }
 
+  ${media.tabletOrLandscape`
+    justify-content: center;
+  `};
   ${media.desktop`
     position: static;
-    justify-content: center;
     overflow-x: visible;
     box-shadow: none;
 
