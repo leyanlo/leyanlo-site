@@ -7,10 +7,6 @@ import { StyledAnchor } from './styled/link';
 import media from './styled/media';
 
 const StyledTabs = styled.ul`
-  position: fixed;
-  bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
-  left: 0;
-  z-index: var(--zNavbar);
   display: flex;
   width: 100%;
   height: var(--tabsHeight);
@@ -20,7 +16,6 @@ const StyledTabs = styled.ul`
   white-space: nowrap;
   list-style-type: none;
   background-color: var(--navbarBackground);
-  box-shadow: inset 0 -1px 0 0 var(--xLightGray);
   -webkit-overflow-scrolling: touch;
 
   ::after {
@@ -44,9 +39,7 @@ const StyledTabs = styled.ul`
     justify-content: center;
   `};
   ${media.desktop`
-    position: static;
     overflow-x: visible;
-    box-shadow: none;
 
     ::after {
       display: none;

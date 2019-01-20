@@ -10,7 +10,7 @@ import media from './styled/media';
 
 const Main = styled.main`
   --mainMinHeight: calc(
-    100vh - var(--headerHeight) - var(--navbarHeight) - var(--tabsHeight) -
+    100vh - var(--headerHeight) - var(--navbarHeight) -
       var(--iOSSafariToolbarHeight)
   );
 
@@ -18,16 +18,12 @@ const Main = styled.main`
   flex-direction: column;
   min-height: var(--mainMinHeight);
   padding-right: var(--safeAreaInsetRight);
-  padding-bottom: calc(
-    var(--safeAreaInsetBottom) + var(--navbarHeight) + var(--tabsHeight)
-  );
+  padding-bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
   padding-left: var(--safeAreaInsetLeft);
   ${props => (props['has-tabs'] ? `--tabsHeight: 40px` : ``)};
   ${media.desktop`
     /* No toolbars */
     --mainMinHeight: calc(100vh - var(--headerHeight));
-
-    padding-bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight));
   `};
 `;
 
