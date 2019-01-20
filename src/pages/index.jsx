@@ -1,3 +1,4 @@
+import * as PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import React from 'react';
 
@@ -10,45 +11,55 @@ import {
 } from '../components/styled/hero';
 import Layout from '../components/layout';
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
+  <Layout>
+    <Hero>
+      <HeroCard>
+        <HeroImage
+          fixed={data.file.childImageSharp.fixed}
+          alt="Headshot"
+          style={{
+            position: 'absolute'
+          }}
+        />
+        <HeroContent>
+          <h1>Leyan Lo</h1>
+          <HeroHr />
+          <h3>Software engineer</h3>
+          <p>
+            Amateur violinist
+            <br />
+            Former world record Rubik’s&nbsp;cube&nbsp;solver
+          </p>
+        </HeroContent>
+      </HeroCard>
+    </Hero>
+  </Layout>
+);
+
+export default props => (
   <StaticQuery
     query={graphql`
       query {
-        headshotFile: file(relativePath: { regex: "/headshot.jpg/" }) {
+        file(relativePath: { eq: "headshot.jpg" }) {
           childImageSharp {
-            fixed(width: 96, height: 96, quality: 90) {
+            fixed(width: 96, height: 96, quality: 100) {
               ...GatsbyImageSharpFixed
             }
           }
         }
       }
     `}
-    render={data => (
-      <Layout>
-        <Hero>
-          <HeroCard>
-            <HeroImage
-              fixed={data.headshotFile.childImageSharp.fixed}
-              alt="Headshot"
-              style={{
-                position: 'absolute'
-              }}
-            />
-            <HeroContent>
-              <h1>Leyan Lo</h1>
-              <HeroHr />
-              <h3>Software engineer</h3>
-              <p>
-                Amateur violinist
-                <br />
-                Former world record Rubik’s&nbsp;cube&nbsp;solver
-              </p>
-            </HeroContent>
-          </HeroCard>
-        </Hero>
-      </Layout>
-    )}
+    render={data => <IndexPage data={data} {...props} />}
   />
 );
 
-export default IndexPage;
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    file: PropTypes.shape({
+      childImageSharp: PropTypes.shape({
+        fixed: PropTypes.object.isRequired
+      }).isRequired
+    }).isRequired
+  }).isRequired
+};
