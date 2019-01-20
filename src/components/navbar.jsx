@@ -22,8 +22,7 @@ const Navbar = styled.nav`
   padding-left: var(--safeAreaInsetLeft);
   background-color: var(--navbarBackground);
   ${media.desktop`
-    position: initial;
-    width: initial;
+    position: static;
     height: 100%;
     padding: 0;
     background-color: transparent;
