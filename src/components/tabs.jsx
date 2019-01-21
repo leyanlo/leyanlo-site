@@ -19,8 +19,8 @@ const StyledTabs = styled.ul`
   -webkit-overflow-scrolling: touch;
 
   ::after {
-    position: fixed;
-    bottom: calc(var(--safeAreaInsetBottom) + var(--navbarHeight) + 1px);
+    position: absolute;
+    top: calc(var(--headerHeight) - 1px);
     left: 0;
     width: 100%;
     height: calc(var(--tabsHeight) - 1px);
@@ -35,11 +35,9 @@ const StyledTabs = styled.ul`
     content: '';
   }
 
-  ${media.tabletOrLandscape`
-    justify-content: center;
-  `};
   ${media.desktop`
     overflow-x: visible;
+    justify-content: center;
 
     ::after {
       display: none;
