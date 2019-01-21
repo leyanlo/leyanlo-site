@@ -40,11 +40,11 @@ export const AlgGridIdAnchor = styled(StyledAnchor)`
   ${algGridIdStyles};
 `;
 
-export const AlgGridPllIdAnchor = styled(StyledAnchor)`
+export const AlgGridPllIdAnchor = styled(AlgGridIdAnchor)`
   flex-basis: 32px;
 `;
 
-export const AlgGridCollIdAnchor = styled(StyledAnchor)`
+export const AlgGridCollIdAnchor = styled(AlgGridIdAnchor)`
   flex-basis: 20px;
 `;
 
