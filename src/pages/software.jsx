@@ -16,10 +16,10 @@ const SoftwarePage = () => (
         <p>I like making things! My interests include:</p>
         <UnorderedList>
           <ListItem>Designing coherent UX systems</ListItem>
+          <ListItem>Making applications responsive and accessible</ListItem>
           <ListItem>Refactoring codebases</ListItem>
           <ListItem>Streamlining build systems</ListItem>
           <ListItem>Debugging minified code</ListItem>
-          <ListItem>Building a prettier git log</ListItem>
         </UnorderedList>
         <p>
           <StyledAnchor
