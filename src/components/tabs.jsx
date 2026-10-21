@@ -1,5 +1,5 @@
 import * as PropTypes from 'prop-types';
-import { Location, navigate } from '@reach/router';
+import { Location, navigate } from '@gatsbyjs/reach-router';
 import React from 'react';
 import styled from 'styled-components';
 
